@@ -13,4 +13,3 @@ Project is not finished yet. For more information:: https://discord.gg/vCdPTjD6r
 * !ddos.ip & !stopddos.ip
 * !miner.ip & !stopminer.ip
 * !pswd.ip
-
