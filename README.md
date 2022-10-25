@@ -1,6 +1,6 @@
 Project is not finished yet. For more information:: https://discord.gg/vCdPTjD6rZ
 
-** Bot Commands **
+# Bot Commands
 > !help # Help menu
 > !clear    # Clear chat
 > !sessions # List open sessions
@@ -11,7 +11,7 @@ Project is not finished yet. For more information:: https://discord.gg/vCdPTjD6r
 > !miner    # Start miner   # Settings on Github
 > !stopminer    # Stop miner
 
-** Self Commands **
+# Self Commands
 > !kill.<ip>    # Close session
 > !shell.<ip> <cmd> # Run command    # Prints output of command
 > !ddos.<ip>    # Starts DDOS Attack    # Settings on Github
