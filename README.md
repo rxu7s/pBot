@@ -1,4 +1,4 @@
-Project is on beta version. For more information: https://discord.gg/vCdPTjD6rZ
+Project is not finished yet. For more information: https://discord.gg/vCdPTjD6rZ
 
 # Bot Commands
 * !help # Help menu
