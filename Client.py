@@ -8,7 +8,7 @@ from tendo import singleton
 from discord.ext import commands
 from discord import app_commands
 
-token = 'YOURDISCORDTOKEN' # token
+token = 'YOURBOTTOKEN' # token
 channel_id = YOURCHANNELID # channel id
 
 # single proccess
