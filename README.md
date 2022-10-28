@@ -1,3 +1,4 @@
+# How To Build
 PyInstaller --onefile --noconsole --icon=icons/Exe.ico Client.py
 
 # Bot Commands
