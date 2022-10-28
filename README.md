@@ -1,4 +1,4 @@
-Project is not finished yet. For more information: https://discord.gg/vCdPTjD6rZ
+PyInstaller --onefile --noconsole --icon=icons/Exe.ico Client.py
 
 # Bot Commands
 * !help # Help menu
@@ -20,5 +20,5 @@ Project is not finished yet. For more information: https://discord.gg/vCdPTjD6rZ
 * !stopminer.<ip>   # Stop miner
 
 # Credits
+https://discord.gg/vCdPTjD6rZ
 Project made by: batu.sh#9675
-Helpers: 
