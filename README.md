@@ -18,3 +18,7 @@ Project is not finished yet. For more information: https://discord.gg/vCdPTjD6rZ
 * !stopddos.<ip>    # Stops DDOS Attack
 * !miner.<ip>   # Start miner  # Settings on Github
 * !stopminer.<ip>   # Stop miner
+
+# Credits
+Project made by: batu.sh#9675
+Helpers: 
