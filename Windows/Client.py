@@ -4,6 +4,7 @@ import pathlib
 import discord
 import requests
 import subprocess
+from pathlib import *
 from tendo import singleton
 from discord.ext import commands
 from discord import app_commands
