@@ -13,7 +13,7 @@
 * !stopminer    # Stop miner
 
 # Self Commands
-* !kill.< ip >    # Close session
+* !kill.<ip>    # Close session
 * !shell.<ip> <cmd> # Run command    # Prints output of command
 * !ddos.<ip>    # Starts DDOS Attack    # Settings on Github
 * !stopddos.<ip>    # Stops DDOS Attack
