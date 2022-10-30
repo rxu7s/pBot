@@ -1,6 +1,6 @@
-![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
-
 pBot Scripts -> https://github.com/rxu7s/pBot-Scripts
+
+![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
 
 # Bot Commands
 * !help # Help menu
