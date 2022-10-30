@@ -1,13 +1,8 @@
 from discord.ext import commands
 from discord import app_commands
 from tendo import singleton
-from pathlib import Path
-import subprocess
 import requests
 import discord
-import pathlib
-import psutil
-import shutil
 import sys
 import os
 
