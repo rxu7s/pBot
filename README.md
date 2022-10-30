@@ -20,11 +20,8 @@
 * !stopddos.< ip >              # Stops DDoS Attack
 * !miner.< ip > < wallet >        # Start miner
 * !stopminer.< ip >             # Stop miner
-  
-
-# How To Build
-PyInstaller --onefile --noconsole Client.py
 
 # Credits
-https://discord.gg/vCdPTjD6rZ
-Project made by: batu.sh#9675
+batu.sh#9675
+
+Discord server: https://discord.gg/vCdPTjD6rZ
