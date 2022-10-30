@@ -22,4 +22,4 @@
 * !stopminer.< ip >             # Stop miner
 
 # Credits
-batu.sh#9675 - Discord server: https://discord.gg/vCdPTjD6rZ
+batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
