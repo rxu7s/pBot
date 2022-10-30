@@ -21,5 +21,8 @@
 * !miner.< ip > < wallet >        # Start miner
 * !stopminer.< ip >             # Stop miner
 
+# How to use
+edit token on Client.py
+
 # Credits
 batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
