@@ -1,5 +1,5 @@
 # Discord.py BotNet
-![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
+![image](https://user-images.githubusercontent.com/104208624/198898533-0d2f3c36-befa-437a-b44c-d9cb1e9f3e55.png)
 
 # Commands
 * !help                   # Help menu
