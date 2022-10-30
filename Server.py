@@ -42,9 +42,8 @@ async def clear(ctx):
 @bot.command()
 async def servershell(ctx, *args):
     arguments = ' '.join(args)
-    os.system(f'{arguments} > output.txt')
-    await ctx.send(file=discord.File(r'output.txt'))
-    if os.path.exists("output.txt"):
-        os.remove("output.txt")
+    stream = os.system(arguments)
+    output = stream.read()
+    await ctx.send(f"``{output}``")
 
 bot.run(token)
