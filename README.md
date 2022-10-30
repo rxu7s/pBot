@@ -14,7 +14,7 @@
 * !stopminer              # Stop miner
 
 # How to use
-Edit token on Client.py
+Edit token/channel_id on Client.py
 
 Edit token on Server.py
 
