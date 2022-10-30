@@ -1,4 +1,4 @@
-# Discord BotNet
+# Discord.py BotNet
 ![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
 
 # Commands
