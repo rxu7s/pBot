@@ -20,8 +20,7 @@
 * !miner.< ip >   # Start miner  # Settings on Github
 * !stopminer.< ip >   # Stop miner
 
-# Scripts
-https://github.com/rxu7s/pBot-Scripts
+# Scripts -> https://github.com/rxu7s/pBot-Scripts
 
 # How To Build
 PyInstaller --onefile --noconsole Client.py
