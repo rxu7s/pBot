@@ -4,6 +4,7 @@
 # Features
 * Single proccess
 * Add to registry startup
+* Hidden
 
 # Bot Commands
 * !help # Help menu
