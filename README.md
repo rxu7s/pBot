@@ -23,5 +23,4 @@
 
 # Credits
 batu.sh#9675
-
 Discord server: https://discord.gg/vCdPTjD6rZ
