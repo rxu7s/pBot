@@ -13,12 +13,5 @@
 * !miner < wallet >         # Start miner
 * !stopminer              # Stop miner
 
-# How to use
-Edit token/channel_id on Client.py
-
-Edit token on Server.py
-
-Edit url on Setup4Client.bat
-
 # Credits
 batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
