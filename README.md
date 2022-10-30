@@ -8,16 +8,16 @@
 * !kill                   # Close sessions
 * !servershell            # Run command on Server.py
 * !shell < cmd >            # Run command
-* !ddos < ip > < byte >       # Starts DDOS Attack
-* !stopddos               # Stops DDOS Attack
+* !ddos < ip > < byte >       # Starts DDoS Attack
+* !stopddos               # Stops DDoS Attack
 * !miner < wallet >         # Start miner
 * !stopminer              # Stop miner
 
 # Self Commands
 * !kill.< ip >                  # Close session
 * !shell.< ip > < cmd >           # Run command
-* !ddos.< ip > < ip > < byte >      # Starts DDOS Attack
-* !stopddos.< ip >              # Stops DDOS Attack
+* !ddos.< ip > < ip > < byte >      # Starts DDoS Attack
+* !stopddos.< ip >              # Stops DDoS Attack
 * !miner.< ip > < wallet >        # Start miner
 * !stopminer.< ip >             # Stop miner
   
