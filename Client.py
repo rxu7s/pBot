@@ -3,6 +3,7 @@ from discord import app_commands
 from tendo import singleton
 import requests
 import discord
+import psutil
 import sys
 import os
 
