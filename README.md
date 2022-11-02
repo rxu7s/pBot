@@ -8,7 +8,7 @@
 * !kill                   # Close sessions
 * !servershell            # Run command on Server.py
 * !shell < cmd >            # Run command
-* !ddos < ip > < byte >       # Starts DDoS Attack
+* !ddos < ip >       # Starts DDoS Attack
 * !stopddos               # Stops DDoS Attack
 * !miner < wallet >         # Start Verus coin miner
 * !stopminer              # Stop miner
