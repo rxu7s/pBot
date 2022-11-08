@@ -20,6 +20,6 @@
 * !stopminer              # Stop miner
 
 # Credits
-https://discord.gg/vCdPTjD6rZ - batu.sh#9675 Buy? Dm me.
+https://discord.gg/vCdPTjD6rZ - #batu.sh#9675 Buy? Dm me.
 
 ![image](https://user-images.githubusercontent.com/104208624/200583872-8876b881-82bb-4651-8afb-bcd3e7bd9e2c.png)
