@@ -5,11 +5,11 @@
 
 # Features
 * Hidden -> Works on /tmp directory
-* If os is windows and program is encoded, startup cannot be used
 * Startup -> Adds itself to /boot
 * Mining uses half of the CPU (changeable)
 * DDoS attack uses 'storm' script
 * Windows and Linux are supported platforms and tested
+* If os is windows and program is encoded, startup cannot be used
 
 # Commands
 * !help                   # Help menu
