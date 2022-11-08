@@ -13,10 +13,10 @@
 * !sessions               # List open sessions
 * !kill                   # Close sessions
 * !servershell            # Run command on Server.py
-* !shell < cmd >            # Run command
-* !ddos < ip >       # Start DDoS Attack
+* !shell < cmd >          # Run command
+* !ddos < ip >            # Start DDoS Attack
 * !stopddos               # Stop DDoS Attack
-* !miner < wallet >         # Start Verus coin miner
+* !miner < wallet >       # Start Verus coin miner
 * !stopminer              # Stop miner
 
 # Credits
