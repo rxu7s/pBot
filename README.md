@@ -8,6 +8,7 @@
 * Startup -> Adds itself to /boot
 * Mining uses half of the CPU
 * DDoS attack uses 'storm' script
+* Windows and Linux are supported platforms and tested
 
 # Commands
 * !help                   # Help menu
