@@ -16,6 +16,6 @@
 # Credits
 batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
 
-![image](https://user-images.githubusercontent.com/104208624/200583798-af39b31d-c1d1-4372-9397-3ccfc0adadbc.png)
+![image](https://user-images.githubusercontent.com/104208624/200583872-8876b881-82bb-4651-8afb-bcd3e7bd9e2c.png)
 
 Buy? Dm me.
