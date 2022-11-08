@@ -4,8 +4,8 @@
 # features
 * Slient
 * Startup File
-* 
-* 
+* Mining uses half of the CPU
+* DDoS attack uses 'storm' script
 
 # Commands
 * !help                   # Help menu
