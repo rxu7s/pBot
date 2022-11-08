@@ -1,5 +1,5 @@
 # Discord.py BotNet
-![image](https://user-images.githubusercontent.com/104208624/198898533-0d2f3c36-befa-437a-b44c-d9cb1e9f3e55.png)
+![image](https://user-images.githubusercontent.com/104208624/200583461-146005fc-d2aa-4baf-9a71-babebc985633.png)
 
 # Commands
 * !help                   # Help menu
@@ -16,5 +16,6 @@
 # Credits
 batu.sh#9675 - https://discord.gg/vCdPTjD6rZ
 
+![image](https://user-images.githubusercontent.com/104208624/200583657-3bda94b6-8921-48d0-8ae1-226c3625c64a.png)
 
 Buy? Dm me.
