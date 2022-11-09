@@ -1,8 +1,6 @@
 # Discord.py BotNet
 ![image](https://user-images.githubusercontent.com/104208624/200583461-146005fc-d2aa-4baf-9a71-babebc985633.png)
 
-![image](https://user-images.githubusercontent.com/104208624/200583872-8876b881-82bb-4651-8afb-bcd3e7bd9e2c.png)
-
 # Features
 * Hidden -> Works on /tmp, %temp% directory
 * Startup -> Adds itself to /boot, shell:startup
