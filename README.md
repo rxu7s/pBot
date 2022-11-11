@@ -11,6 +11,7 @@
 * Nmap local network scan
 * Startup on boot
 * Windows support
+* !upload, !download commands
 
 # Bot Commands
 * !sessions               # List open sessions
