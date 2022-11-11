@@ -13,17 +13,17 @@
 * Nmap local network scan
 
 # Bot Commands
-* !sessions                       # List open sessions
-* !kill                           # Close session
-* !shell < cmd >                  # Run command
-* !download < link >              # Upload file to Discord
-* !upload < link > < file_name >  # Download file
-* !sh-update < link >             # Update linux script
-* !win-update                     # Update windows script
-* !ddos < ip >                    # Start DDoS Attack
-* !stopddos                       # Stop DDoS Attack
-* !miner < wallet >               # Start Verus coin miner
-* !stopminer                      # Stop miner
+* !sessions                         # List open sessions
+* !kill                             # Close session
+* !shell < cmd >                    # Run command
+* !download < link >                # Upload file to Discord
+* !upload < link > < file_name >    # Download file
+* !sh-update < link > < file_name > # Update linux script
+* !win-update                       # Update windows script
+* !ddos < ip >                      # Start DDoS Attack
+* !stopddos                         # Stop DDoS Attack
+* !miner < wallet >                 # Start Verus coin miner
+* !stopminer                        # Stop miner
 
 # Self Commands
 
