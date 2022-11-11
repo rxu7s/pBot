@@ -28,7 +28,7 @@
 * !ddos.< ip > < ip >            # Start DDoS Attack
 * !stopddos.< ip >               # Stop DDoS Attack
 * !miner.< ip > < wallet >       # Start Verus coin miner
-* !stopminer.ip                  # Stop miner
+* !stopminer.< ip >              # Stop miner
 
 # Credits: batu.sh#9675
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
