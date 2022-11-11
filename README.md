@@ -14,8 +14,7 @@
 # Bot Commands
 * !sessions               # List open sessions
 * !kill                   # Close sessions
-* !shell < cmd >          # Run command and if output is not large send as text if large send as txt
-* !xshell < cmd >         # Run command and always give output as txt
+* !shell < cmd >          # Run command and if output is not large send as text if large just send log
 * !ddos < ip >            # Start DDoS Attack
 * !stopddos               # Stop DDoS Attack
 * !miner < wallet >       # Start Verus coin miner
@@ -23,8 +22,7 @@
 
 # Self Commands
 * !kill.ip                   # Close session
-* !shell.ip < cmd >          # Run command and if output is not large send as text if large send as txt
-* !xshell.ip < cmd >         # Run command and always give output as txt
+* !shell.ip < cmd >          # Run command and if output is not large send as text if large just send log
 * !ddos.ip < ip >            # Start DDoS Attack
 * !stopddos.ip               # Stop DDoS Attack
 * !miner.ip < wallet >       # Start Verus coin miner
