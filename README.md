@@ -8,6 +8,10 @@
 * DDoS attack uses 'storm' script
 * Windows and Linux are supported platforms and tested
 
+# Soon
+* Zmap entire network scan
+* Nmap local network scan
+
 # Bot Commands
 * !sessions               # List open sessions
 * !kill                   # Close sessions
