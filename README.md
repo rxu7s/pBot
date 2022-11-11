@@ -12,6 +12,7 @@
 * Nmap local network scan
 * Startup on boot
 * !upload, !download commands
+* !update command
 
 # Bot Commands
 * !sessions               # List open sessions
