@@ -8,7 +8,7 @@
 * DDoS attack uses 'storm' script
 * Windows and Linux are supported platforms and tested
 
-# ----- Bot Commands ----- #
+# Bot Commands
 * !sessions               # List open sessions
 * !kill                   # Close sessions
 * !shell < cmd >          # Run command and if output is not large send as text if large send as txt
@@ -18,7 +18,7 @@
 * !miner < wallet >       # Start Verus coin miner
 * !stopminer              # Stop miner
 
-# ----- Self Commands ----- #
+# Self Commands
 * !kill.ip                   # Close session
 * !shell.ip < cmd >          # Run command and if output is not large send as text if large send as txt
 * !fshell.ip < cmd >         # Run command and always give output as txt
