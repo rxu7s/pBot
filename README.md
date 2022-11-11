@@ -2,7 +2,8 @@
 ![image](https://user-images.githubusercontent.com/104208624/200583461-146005fc-d2aa-4baf-9a71-babebc985633.png)
 
 # Features
-* Hidden
+* Hidden (Works in /tmp, %temp%)
+* Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
 * Mining uses half of the CPU
 * DDoS attack uses 'storm' script
