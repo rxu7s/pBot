@@ -11,8 +11,6 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
-
-* !upload, !download commands
 * !update command
 
 # Bot Commands
