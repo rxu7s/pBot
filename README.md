@@ -11,7 +11,6 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
-* Startup on boot
 * !upload, !download commands
 * !update command
 
