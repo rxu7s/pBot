@@ -2,7 +2,8 @@
 ![image](https://user-images.githubusercontent.com/104208624/200583461-146005fc-d2aa-4baf-9a71-babebc985633.png)
 
 # Features
-* Hidden -> Works on /tmp directory
+* Hidden
+* Tested on Windows and Linux platforms
 * Mining uses half of the CPU
 * DDoS attack uses 'storm' script
 
@@ -10,7 +11,6 @@
 * Zmap entire network scan
 * Nmap local network scan
 * Startup on boot
-* Windows support
 * !upload, !download commands
 
 # Bot Commands
