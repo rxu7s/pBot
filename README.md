@@ -10,6 +10,7 @@
 * Zmap entire network scan
 * Nmap local network scan
 * Startup on boot
+* Windows support
 
 # Bot Commands
 * !sessions               # List open sessions
