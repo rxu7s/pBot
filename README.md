@@ -6,7 +6,7 @@
 * Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
 * Mining uses half of the CPU
-* DDoS attack uses 'storm' script
+* DDoS attack uses 'storm' script on linux platforms
 
 # Soon
 * Zmap entire network scan
