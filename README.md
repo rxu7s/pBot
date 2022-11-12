@@ -11,9 +11,9 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
-* Screenshot
-* Webcam picture
-* !check command
+* !screenshot
+* !webcampic
+* !check
 
 # Bot Commands
 * !sessions                         # List open sessions
