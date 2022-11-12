@@ -11,6 +11,7 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
+* !check command
 
 # Bot Commands
 * !sessions                         # List open sessions
