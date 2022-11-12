@@ -11,6 +11,8 @@
 # Soon
 * Zmap entire network scan
 * Nmap local network scan
+* Screenshot
+* Webcam picture
 * !check command
 
 # Bot Commands
