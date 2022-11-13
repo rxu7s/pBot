@@ -14,6 +14,7 @@
 * !screenshot
 * !webcampic
 * !check
+* !update-script
 
 # Bot Commands
 * !sessions                         # List open sessions
@@ -21,7 +22,7 @@
 * !shell < cmd >                    # Run command
 * !download < link >                # Upload file to Discord
 * !upload < link > < file_name >    # Download file
-* !update                           # Update script
+* !update                           # Re-download rat
 * !ddos < ip >                      # Start DDoS Attack
 * !stopddos                         # Stop DDoS Attack
 * !miner < wallet >                 # Start Verus coin miner
