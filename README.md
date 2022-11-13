@@ -22,7 +22,8 @@
 * !shell < cmd >                    # Run command
 * !download < link >                # Upload file to Discord
 * !upload < link > < file_name >    # Download file
-* !update                           # Re-download rat
+* !update                           # Re-download rat and remove old
+* !update-script                    # Update the rat updater
 * !ddos < ip >                      # Start DDoS Attack
 * !stopddos                         # Stop DDoS Attack
 * !miner < wallet >                 # Start Verus coin miner
