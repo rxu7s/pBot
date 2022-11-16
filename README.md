@@ -14,7 +14,6 @@
 * !screenshot
 * !webcampic
 * !check
-* !update-script
 
 # Bot Commands
 * !sessions                         # List open sessions
