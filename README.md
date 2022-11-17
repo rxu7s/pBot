@@ -24,9 +24,9 @@
 * !update                           # Re-download rat and remove old
 * !update-script                    # Update the rat updater
 * !ddos < ip >                      # Start DDoS Attack
-* !stop-ddos                         # Stop DDoS Attack
+* !stop-ddos                        # Stop DDoS Attack
 * !miner < wallet >                 # Start Verus coin miner
-* !stop-miner                        # Stop miner
+* !stop-miner                       # Stop miner
 
 # Self Commands
 
