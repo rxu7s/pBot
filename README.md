@@ -17,16 +17,16 @@
 
 # Bot Commands
 * !sessions                         # List open sessions
-* !kill                             # Close session
+* !exit                             # Close session
 * !shell < cmd >                    # Run command
 * !download < link >                # Upload file to Discord
 * !upload < link > < file_name >    # Download file
 * !update                           # Re-download rat and remove old
 * !update-script                    # Update the rat updater
 * !ddos < ip >                      # Start DDoS Attack
-* !stopddos                         # Stop DDoS Attack
+* !stop-ddos                         # Stop DDoS Attack
 * !miner < wallet >                 # Start Verus coin miner
-* !stopminer                        # Stop miner
+* !stop-miner                        # Stop miner
 
 # Self Commands
 
