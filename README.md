@@ -9,7 +9,6 @@
 * DDoS attack uses 'storm' script on linux platforms
 
 # Soon
-* Zmap entire network scan
 * Nmap local network scan
 * !screenshot
 * !webcampic
