@@ -13,7 +13,6 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 
 # Soon
 * Nmap local network scan
-* !check
 
 # Bot Commands
 * !sessions                         # List open sessions
