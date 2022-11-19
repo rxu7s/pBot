@@ -5,8 +5,7 @@
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 
 - Helpers:
-Julian#6584
-Hamster#8835
+Julian#6584, Hamster#8835
 
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
