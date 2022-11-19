@@ -4,6 +4,10 @@
 # Credits: batu.sh#9675
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 
+Helpers:
+- Julian#6584
+- Hamster#8835
+
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
 * Persistence (Copying to /boot, shell:startup)
