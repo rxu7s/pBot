@@ -15,23 +15,5 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * Nmap scan
 * ?
 
-# Bot Commands
-* !sessions 					# List open sessions
-* !exit 						# Exit session
+![image](https://user-images.githubusercontent.com/104208624/202854501-35b09c08-62c9-4d88-8ecf-c2aaf5099bdf.png)
 
-* !info 						# Give IP information as Json
-* !check 						# Check if miner is running or not
-* !shell < cmd > 				# Run command
-
-* !download < link > < name > 	# Download file
-* !upload < path > 				# Upload file
-* !update 						# Update RAT
-
-* !sh-update-script < link > 	# Update script only on Linux
-* !win-update-script < Link > 	# Update script only on Windows
-
-* !ddos	< ip > 					# Start DDoS attack
-* !stopddos 					# Stop DDoS attack
-
-* !miner < wallet > 			# Start XMR miner
-* !stopminer 					# Stop miner
