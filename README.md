@@ -9,7 +9,7 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
 * Mining uses half of the CPU
-* DDoS attack uses 'storm' script on linux platforms
+* DDoS attack uses 'storm' script
 
 # Soon
 * Nmap local network scan
