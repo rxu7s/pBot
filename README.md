@@ -19,13 +19,9 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * !sessions                         # List open sessions
 * !exit                             # Close session
 * !shell < cmd >                    # Run command
-* !download < link >                # Download file
-* !upload < link > < file_name >    # Upload file to discord
-* !update                           # Re-download rat
-* !update-script < link >           # Update the rat updater
-* !ddos < ip >                      # Start DDoS Attack
-* !stop-ddos                        # Stop DDoS Attack
-* !miner < wallet >                 # Start Monero coin miner
-* !stop-miner                       # Stop miner
+
+
 
 # Self Commands
+Example: !shell.127.0.0.1 echo Test
+Example2: !exit.127.0.0.1
