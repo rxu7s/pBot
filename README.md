@@ -24,4 +24,5 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 
 # Self Commands
 Example: !shell.127.0.0.1 echo Test
+
 Example2: !exit.127.0.0.1
