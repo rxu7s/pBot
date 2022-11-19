@@ -1,11 +1,10 @@
 # Discord.py BotNet
 ![image](https://user-images.githubusercontent.com/104208624/202854669-6d08daef-eae2-438b-a354-78b8accb7cb5.png)
 
-# Credits: batu.sh#9675
-https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
+https://discord.gg/vCdPTjD6rZ - Buy? Dm me: batu.sh#9675
 
-# Helpers:
-Julian#6584, Hamster#8835
+# Credits:
+batu.sh#9675, Julian#6584, Hamster#8835
 
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
