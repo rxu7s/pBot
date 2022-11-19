@@ -15,5 +15,6 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * Nmap scan
 * ?
 
+# Commands
 ![image](https://user-images.githubusercontent.com/104208624/202854501-35b09c08-62c9-4d88-8ecf-c2aaf5099bdf.png)
 
