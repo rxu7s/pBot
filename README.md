@@ -16,22 +16,22 @@ https://discord.gg/vCdPTjD6rZ - Buy? Dm me.
 * ?
 
 # Bot Commands
-* !sessions 					List open sessions
-* !exit 						Exit session
+* !sessions 					# List open sessions
+* !exit 						# Exit session
 
-* !info 						Give IP information as Json
-* !check 						Check if miner is running or not
-* !shell < cmd > 				Run command
+* !info 						# Give IP information as Json
+* !check 						# Check if miner is running or not
+* !shell < cmd > 				# Run command
 
-* !download < link > < name > 	Download file
-* !upload < path > 				Upload file
-* !update 						Update RAT
+* !download < link > < name > 	# Download file
+* !upload < path > 				# Upload file
+* !update 						# Update RAT
 
-* !sh-update-script < link > 	Update script only on Linux
-* !win-update-script < Link > 	Update script only on Windows
+* !sh-update-script < link > 	# Update script only on Linux
+* !win-update-script < Link > 	# Update script only on Windows
 
-* !ddos	< ip > 					Start DDoS attack
-* !stopddos 					Stop DDoS attack
+* !ddos	< ip > 					# Start DDoS attack
+* !stopddos 					# Stop DDoS attack
 
-* !miner < wallet > 			Start XMR miner
-* !stopminer 					Stop miner
+* !miner < wallet > 			# Start XMR miner
+* !stopminer 					# Stop miner
