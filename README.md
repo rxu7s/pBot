@@ -4,7 +4,7 @@
 https://discord.gg/vCdPTjD6rZ - Buy? Dm me: batu.sh#9675
 
 # Credits:
-batu.sh#9675, Julian#6584
+batu.sh#9675 and Julian#6584 helped me so much
 
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
