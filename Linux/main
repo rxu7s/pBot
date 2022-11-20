@@ -3,8 +3,8 @@ cp $(pwd)/$0 /boot
 mv /boot/$0 /boot/main
 cd /tmp
 
-url=
-file_name=
+url=!!!
+file_name=!!!
 
 apt-get update -y
 apt-get install curl -y
