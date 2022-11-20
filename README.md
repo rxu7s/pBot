@@ -15,7 +15,6 @@ And Julian#6584 helped me so much
 * DDoS attack uses 'storm' script
 
 # Soon
-* Restart session
 * Nmap scan
 * ?
 
