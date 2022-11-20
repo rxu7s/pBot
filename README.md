@@ -8,7 +8,7 @@ https://discord.gg/vCdPTjD6rZ - batu.sh#9675
 # Credits:
 batu.sh#9675
 
-And Julian#6584 helped me so much
+Julian#6584 helped me so much
 
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
