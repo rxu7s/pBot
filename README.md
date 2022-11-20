@@ -16,10 +16,6 @@ Julian#6584 helped me so much
 * Tested on Windows and Linux platforms
 * DDoS attack uses 'storm' script
 
-# Soon
-* Nmap scan
-* ?
-
 # Commands
 ![image](https://user-images.githubusercontent.com/104208624/202913065-d15ab99c-2320-4fb5-866e-ea2b91c2c87c.png)
 
