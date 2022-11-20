@@ -20,5 +20,5 @@ And Julian#6584 helped me so much
 * ?
 
 # Commands
-![image](https://user-images.githubusercontent.com/104208624/202854501-35b09c08-62c9-4d88-8ecf-c2aaf5099bdf.png)
+![image](https://user-images.githubusercontent.com/104208624/202912976-62a3b007-56da-41dc-99fb-c88ea05e4adb.png)
 
