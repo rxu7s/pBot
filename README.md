@@ -17,4 +17,4 @@ Julian#6584 helped me so much
 * DDoS attack uses 'storm' script
 
 # Commands
-!![image](https://user-images.githubusercontent.com/104208624/202915368-5e9c7225-5e0e-4060-b159-56a0a4769ded.png)
+![image](https://user-images.githubusercontent.com/104208624/202915368-5e9c7225-5e0e-4060-b159-56a0a4769ded.png)
