@@ -1,0 +1,4 @@
+pyinstaller
+discord
+requests
+psutil
