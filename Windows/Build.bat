@@ -1,1 +1,1 @@
-PyInstaller --onefile --noconsole --icon=Exe.ico WClient.py
+pyinstaller --onefile --noconsole --icon=Exe.ico WClient.py
