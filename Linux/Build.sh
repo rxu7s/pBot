@@ -1,1 +1,1 @@
-pyinstaller --onefile --noconsole --icon=Exe.ico LClient.py
+pyinstaller --onefile --noconsole LClient.py
