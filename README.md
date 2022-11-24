@@ -3,7 +3,7 @@
 
 https://discord.gg/vCdPTjD6rZ
 
-# Credits:
+# Credits
 Orig - batu.sh#9675
 
 TG @udbnt
