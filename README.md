@@ -8,9 +8,6 @@ me: batu.sh#9675
 
 bnt: @udbnt
 
-# Status
-Fixing !info command
-
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
 * Persistence (Copying to /boot, shell:startup)
