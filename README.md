@@ -6,7 +6,7 @@ https://discord.gg/vCdPTjD6rZ
 # Developers
 me: batu.sh#9675
 
-ubnt: @udbnt
+bnt: @udbnt
 
 # Status
 Fixing !info command
