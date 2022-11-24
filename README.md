@@ -14,6 +14,11 @@ bnt: @udbnt
 * Tested on Windows and Linux platforms
 * DDoS attack uses "storm" script
 
+# Soon (self cmds)
+* Zmap entine network scan
+* Webcam picture
+* ?
+
 # Commands
 ![image](https://user-images.githubusercontent.com/104208624/203849645-908bde50-bd0a-49fa-9a8a-1f948953677e.png)
 
