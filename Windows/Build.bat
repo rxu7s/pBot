@@ -1,1 +1,0 @@
-pyinstaller --onefile --noconsole --icon=Exe.ico --upx-dir upx.exe WClient.py
