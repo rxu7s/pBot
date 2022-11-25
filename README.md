@@ -17,7 +17,6 @@ bnt: @udbnt
 
 # Soon
 * Zmap entine network scan
-* Token grabber
 * Webcam picture
 * ?
 
