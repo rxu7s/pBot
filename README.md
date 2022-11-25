@@ -15,7 +15,7 @@ bnt: @udbnt
 * DDoS attack uses "storm" script
 * Mining uses "xmrig"
 
-# Soon (self cmds)
+# Soon
 * Zmap entine network scan
 * Token grabber
 * Webcam picture
