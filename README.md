@@ -9,10 +9,11 @@ me: batu.sh#9675
 bnt: @udbnt
 
 # Features
-* Hidden (Works in /tmp, %temp% + Console is always hidden)
+* Hidden (Works in /tmp, %temp%)
 * Persistence (Copying to /boot, shell:startup)
 * Tested on Windows and Linux platforms
 * DDoS attack uses "storm" script
+* Mining uses "xmrig"
 
 # Soon (self cmds)
 * Zmap entine network scan
