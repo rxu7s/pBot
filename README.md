@@ -16,7 +16,7 @@ bnt: @udbnt
 * Mining uses "xmrig"
 
 # Soon
-* Zmap entine network scan
+* Zmap entine network scan (bruteforce scanned ssh by: https://github.com/bntr00t/sshb)
 * Webcam picture
 * ?
 
