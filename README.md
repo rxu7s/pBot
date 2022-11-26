@@ -17,6 +17,7 @@ bnt: @udbnt
 
 # Soon
 * Webcam picture
+* Netcat reverse shell
 * ?
 
 # Bot Commands
