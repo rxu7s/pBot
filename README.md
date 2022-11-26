@@ -16,8 +16,8 @@ bnt: @udbnt
 * Mining uses "xmrig"
 
 # Soon
-* Webcam picture
-* Reverse shell
+* !webcampic
+* !revshell < IP > < PORT >
 * ?
 
 # Bot Commands
