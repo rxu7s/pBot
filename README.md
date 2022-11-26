@@ -31,7 +31,7 @@ bnt: @udbnt
 
 * !miner < WALLET >                      (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
 * !stopminer                             (Stop miner)
-* !zmap                                  (ZMap scan 100 ip addresses) (Bruteforce iplist.txt by: https://github.com/bntr00t/sshb)
+* !zmap                                  (ZMap subnet scan) (Bruteforce ip addresses by: https://github.com/bntr00t/sshb)
 
 # Self Commands
 
