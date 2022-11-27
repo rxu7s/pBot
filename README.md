@@ -18,6 +18,7 @@ bnt: @udbnt
 # Soon
 * !webcampic
 * !revshell < IP > < PORT >
+* !nmap
 * ?
 
 # Bot Commands
