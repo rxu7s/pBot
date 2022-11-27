@@ -16,6 +16,7 @@ bnt: @udbnt
 * Mining uses "xmrig"
 
 # Soon
+* Web automation to provide bots
 * !webcampic
 * !revshell < IP > < PORT >
 * !nmap
