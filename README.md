@@ -11,7 +11,7 @@ bnt: @udbnt
 # Features
 * Hidden (Works in /tmp, %temp%)
 * Persistence (Copying to /boot, shell:startup)
-* Tested on Windows and Linux platforms
+* Supports Linux and Windows platforms
 * DDoS attack uses "storm" script
 * Mining uses "xmrig"
 
