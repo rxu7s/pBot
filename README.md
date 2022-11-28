@@ -24,7 +24,7 @@ bnt: @udbnt
 # Bot Commands
 
 * !sessions                              (List open sessions)
-* !check                                 (Check miner & ddos status)
+* !check                                 (Check miner, ddos, zmap, nmap status)
 * !updatelinux < LINK >                  (Update RAT on linux platforms) (input Client link)
 * !updatewin < LINK >                    (Update RAT on windows platforms) (input Client.exe link)
 * !ddos < IP >                           (Start DDoS Attack)
