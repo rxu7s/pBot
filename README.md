@@ -17,6 +17,7 @@ bnt: @udbnt
 
 # Soon
 * Web automation to provide bots
+* Bot status Examle= bots: 100
 * !webcampic
 * ?
 
