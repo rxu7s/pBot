@@ -1,7 +1,7 @@
 # Discord.py BotNet
 ![image](https://user-images.githubusercontent.com/104208624/203850203-55e89e04-0f26-4d3c-b87f-e9d8be7ef81f.png)
 
-How to use? https://discord.gg/vCdPTjD6rZ
+Need help? https://discord.gg/vCdPTjD6rZ
 
 # Developers
 me: batu.sh#9675
