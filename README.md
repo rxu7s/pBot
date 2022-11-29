@@ -43,7 +43,7 @@ bnt: @udbnt
 * ?
 
 # Installation and Build
-1- "https://tinyurl.com/HowToCreateDiscordBot"
+1- "https://tinyurl.com/HowCreateDiscordBot"
 
 2- git clone https://github.com/rxu7s/pBot.git
 
