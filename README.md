@@ -18,7 +18,7 @@ bnt: @udbnt
 * !stopddos                              (Stop DDoS)
 * !miner < WALLET >                      (Start slient XMR Crypto Miner CPU + AMD/INTEL GPU's)
 * !stopminer                             (Stop miner)
-* !zmap                                  (ZMap subnet scan) (Bruteforce ip addresses: https://github.com/bntr00t/sshb)
+* !zmap                                  (ZMap subnet scan)
 
 # Self Commands
 
